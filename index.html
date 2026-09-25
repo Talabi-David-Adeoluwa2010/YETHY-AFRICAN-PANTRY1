@@ -3,269 +3,321 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<meta name="theme-color" content="#1B4332" />
+<meta name="theme-color" content="#0B2415" />
 <meta name="description" content="Yethy African Pantry — authentic Nigerian foodstuffs delivered across the UK in 3 days, worldwide in 7–10 days." />
-<title>Yethy African Pantry — Nigerian foodstuffs delivered UK & worldwide</title>
+<title>Yethy African Pantry — The true taste of Africa, delivered</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <style>
 /* ============================================================
    RESET & TOKENS
 ============================================================ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-
 :root{
-  --green-900:#0B2417;
+  --green-950:#06170D;
+  --green-900:#0B2415;
   --green-800:#123322;
   --green-700:#1B4332;
   --green-600:#2D6A4F;
   --green-500:#40916C;
-  --green-100:#DBE9DD;
+  --green-200:#C7E0CE;
+  --green-100:#DCEEDE;
   --green-50:#EFF6F0;
 
-  --orange-700:#A85A00;
-  --orange-600:#C46A00;
-  --orange-500:#E07B14;
-  --orange-100:#FBEAD3;
-  --orange-50:#FDF4E7;
+  --orange-700:#8A4200;
+  --orange-600:#B85E00;
+  --orange-500:#D97706;
+  --orange-400:#E89A3C;
+  --orange-100:#FDEBD0;
+  --orange-50:#FEF6EC;
 
-  --cream-50:#FCFAF6;
-  --cream-100:#F6F1E7;
-  --cream-200:#EDE5D3;
-  --cream-300:#DDD1B6;
+  --cream-50:#FCFAF5;
+  --cream-100:#F7F2E8;
+  --cream-200:#EDE4D1;
+  --cream-300:#DDD0B5;
 
-  --ink:#152A1E;
-  --ink-soft:#4D6355;
-  --ink-mute:#7A8B7F;
-  --line:#E2DACB;
-  --line-dark:#CFC5B1;
+  --ink:#0B2415;
+  --ink-soft:rgba(11,36,21,.66);
+  --ink-faint:rgba(11,36,21,.4);
+  --rule:rgba(11,36,21,.09);
+  --rule-strong:rgba(11,36,21,.18);
 
-  --white:#fff;
-  --red:#B42318;
-  --red-bg:#FEF3F2;
+  --red:#a71d1d;
 
-  --r-sm:6px;
-  --r:10px;
+  --r-xs:3px;
+  --r-sm:5px;
+  --r:8px;
   --r-lg:14px;
-  --r-xl:20px;
+  --r-pill:100px;
 
-  --shadow-sm:0 1px 2px rgba(11,36,23,.05);
-  --shadow:0 2px 8px rgba(11,36,23,.06), 0 1px 2px rgba(11,36,23,.04);
-  --shadow-lg:0 12px 32px -12px rgba(11,36,23,.2);
+  --shadow-xs:0 1px 1px rgba(11,36,21,.04);
+  --shadow-sm:0 2px 8px -2px rgba(11,36,21,.08);
+  --shadow:0 12px 32px -14px rgba(11,36,21,.18);
+  --shadow-lg:0 32px 64px -24px rgba(11,36,21,.28);
 
-  --nav-h:62px;
-  --container:1200px;
+  --nav-h:60px;
+  --container:1280px;
   --pad:20px;
 }
+@media(min-width:768px){:root{--pad:40px}}
 
-@media(min-width:768px){:root{--pad:32px}}
-@media(min-width:1100px){:root{--pad:40px}}
-
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{
-  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
   font-size:15.5px;line-height:1.6;color:var(--ink);
-  background:var(--cream-50);
+  background:var(--cream-100);
   -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
   overflow-x:hidden;
 }
 img{max-width:100%;display:block}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;font-size:inherit}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
 a{color:inherit;text-decoration:none}
-input,textarea,select{font-family:inherit;font-size:1rem;color:inherit}
+input,textarea,select{font-family:inherit;font-size:1rem}
 ::selection{background:var(--orange-500);color:#fff}
 
 /* ============================================================
-   TYPE
+   TYPOGRAPHY
 ============================================================ */
 .serif{font-family:'Fraunces',Georgia,serif;font-optical-sizing:auto}
-h1,h2,h3,h4{color:var(--green-900);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-
-.h-display{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;letter-spacing:-.03em;color:var(--green-900)}
-.h-1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(1.7rem,3.5vw,2.6rem);line-height:1.1;letter-spacing:-.025em;color:var(--green-900)}
-.h-2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(1.3rem,2.4vw,1.8rem);line-height:1.2;letter-spacing:-.02em;color:var(--green-900)}
-.h-3{font-size:1.1rem;font-weight:700;letter-spacing:-.01em;color:var(--green-900)}
-.lead{font-size:1rem;color:var(--ink-soft);line-height:1.65;max-width:62ch}
-.small{font-size:.85rem;color:var(--ink-soft);line-height:1.55}
-.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-600)}
+.h-hero{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2.3rem,6.4vw,4.6rem);line-height:.98;letter-spacing:-.038em;color:var(--green-900)}
+.h-1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.02;letter-spacing:-.032em;color:var(--green-900)}
+.h-2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.45rem,2.8vw,2.1rem);line-height:1.12;letter-spacing:-.026em;color:var(--green-900)}
+.h-3{font-family:'Fraunces',serif;font-weight:500;font-size:1.25rem;line-height:1.25;letter-spacing:-.018em;color:var(--green-900)}
+.lead{font-size:clamp(1rem,1.1vw,1.08rem);color:var(--ink-soft);line-height:1.68;max-width:60ch}
+.mono{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
 
 /* ============================================================
    LAYOUT
 ============================================================ */
 .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 var(--pad)}
-.section{padding:64px 0}
-@media(min-width:768px){.section{padding:88px 0}}
+.section{padding:68px 0}
+@media(min-width:768px){.section{padding:104px 0}}
+
+.marker{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.marker-num{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:.9rem;color:var(--orange-600)}
+.marker-line{flex:0 0 36px;height:1px;background:var(--ink-soft);opacity:.35}
+.marker-label{font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
 
 /* ============================================================
    BUTTONS
 ============================================================ */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:12px 22px;border-radius:var(--r);
-  font-size:.875rem;font-weight:600;letter-spacing:-.005em;
-  transition:background .18s ease, border-color .18s ease, transform .18s ease;
-  white-space:nowrap;text-align:center;border:1px solid transparent;line-height:1.2;
+  padding:13px 22px;border-radius:var(--r);
+  font-size:.85rem;font-weight:600;letter-spacing:-.005em;
+  transition:all .18s ease;white-space:nowrap;text-align:center;
+  border:1px solid transparent;line-height:1;
 }
-.btn svg{width:16px;height:16px;flex-shrink:0}
-.btn-primary{background:var(--green-800);color:#fff}
+.btn svg{width:15px;height:15px;flex-shrink:0}
+.btn-primary{background:var(--green-800);color:var(--cream-50)}
 .btn-primary:hover{background:var(--green-900)}
 .btn-accent{background:var(--orange-500);color:#fff}
 .btn-accent:hover{background:var(--orange-600)}
-.btn-outline{border-color:var(--line-dark);color:var(--green-800);background:#fff}
-.btn-outline:hover{border-color:var(--green-800)}
+.btn-outline{border-color:var(--rule-strong);color:var(--green-800);background:transparent}
+.btn-outline:hover{background:var(--green-800);color:var(--cream-50);border-color:var(--green-800)}
 .btn-ghost{color:var(--green-800);padding:10px 14px}
 .btn-ghost:hover{background:var(--green-50)}
 .btn-full{width:100%}
-.btn-sm{padding:9px 14px;font-size:.8rem}
+.btn-sm{padding:9px 16px;font-size:.78rem}
 
 /* ============================================================
-   ANNOUNCE
+   ANNOUNCEMENT
 ============================================================ */
 .announce{
-  background:var(--green-900);color:#E8E4DA;
-  font-size:.78rem;text-align:center;padding:9px var(--pad);
-  letter-spacing:.005em;
+  background:var(--green-950);color:rgba(252,250,245,.85);
+  font-size:.7rem;letter-spacing:.05em;
+  text-align:center;padding:9px var(--pad);
+  font-weight:500;
 }
-.announce strong{color:var(--orange-500);font-weight:600}
+.announce strong{color:var(--orange-400);font-weight:600}
+.announce .sep{opacity:.35;margin:0 10px}
 
 /* ============================================================
-   DASHBOARD (sticky)
+   DASHBOARD (sticky header)
 ============================================================ */
 .dashboard{
-  position:sticky;top:0;z-index:80;
-  background:rgba(252,250,246,.94);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,242,232,.92);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border-bottom:1px solid var(--rule);
 }
 .dash-row{
-  display:flex;align-items:center;gap:14px;
+  display:flex;align-items:center;gap:18px;
   height:var(--nav-h);padding:0 var(--pad);
   max-width:var(--container);margin:0 auto;
 }
+.dash-logo{display:flex;flex-direction:column;line-height:1;flex-shrink:0;cursor:pointer}
+.dash-logo-main{font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem;letter-spacing:-.035em;color:var(--green-800)}
+.dash-logo-sub{font-size:.46rem;font-weight:700;letter-spacing:.36em;color:var(--orange-500);margin-top:4px;padding-left:2px}
 
-.brand{display:flex;flex-direction:column;line-height:1;cursor:pointer;flex-shrink:0;padding-right:16px;margin-right:8px;border-right:1px solid var(--line)}
-.brand-main{font-family:'Fraunces',serif;font-weight:700;font-size:1.25rem;letter-spacing:-.03em;color:var(--green-800)}
-.brand-sub{font-size:.5rem;font-weight:700;letter-spacing:.28em;color:var(--orange-500);margin-top:3px}
-
-.nav-links{display:none;align-items:center;gap:22px;flex:1}
-.nav-links a{font-size:.875rem;font-weight:500;color:var(--ink-soft);transition:color .15s;padding:6px 0;cursor:pointer}
-.nav-links a:hover{color:var(--green-800)}
+.dash-nav{display:none;align-items:center;gap:24px;flex:1;margin-left:14px}
+.dash-nav a{font-size:.83rem;font-weight:500;color:var(--ink-soft);transition:color .18s;position:relative;letter-spacing:-.005em}
+.dash-nav a:hover{color:var(--green-800)}
+.dash-nav a:hover::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--orange-500)}
 
 .dash-actions{display:flex;align-items:center;gap:4px;margin-left:auto}
 
 .dash-btn{
   display:inline-flex;align-items:center;justify-content:center;gap:6px;
-  height:36px;padding:0 10px;border-radius:var(--r);
-  font-size:.8rem;font-weight:500;color:var(--ink);background:transparent;
-  border:1px solid transparent;transition:all .15s;position:relative;
+  height:36px;padding:0 10px;border-radius:var(--r-sm);
+  font-size:.76rem;font-weight:500;color:var(--green-800);
+  background:transparent;border:1px solid transparent;
+  transition:all .16s;position:relative;
   white-space:nowrap;
 }
-.dash-btn:hover{background:var(--green-50);border-color:var(--line)}
-.dash-btn svg{width:16px;height:16px;flex-shrink:0}
+.dash-btn:hover{background:rgba(11,36,21,.05);border-color:var(--rule)}
+.dash-btn svg{width:15px;height:15px}
 .dash-btn .label{display:none}
 
-.dash-btn.primary{background:var(--green-800);color:#fff;padding:0 14px}
-.dash-btn.primary:hover{background:var(--green-900);border-color:var(--green-900)}
-
-.dash-btn.accent{background:var(--orange-500);color:#fff;padding:0 14px}
-.dash-btn.accent:hover{background:var(--orange-600);border-color:var(--orange-600)}
+.dash-btn.cart{background:var(--green-800);color:var(--cream-50);padding:0 12px}
+.dash-btn.cart:hover{background:var(--green-900)}
+.dash-btn.account{background:var(--orange-500);color:#fff;padding:0 12px}
+.dash-btn.account:hover{background:var(--orange-600)}
 
 .cart-badge{
-  position:absolute;top:-5px;right:-5px;
+  position:absolute;top:-4px;right:-4px;
   background:var(--orange-500);color:#fff;
-  font-size:.6rem;font-weight:700;min-width:17px;height:17px;
-  border-radius:100px;display:none;align-items:center;justify-content:center;
-  padding:0 4px;border:2px solid var(--cream-50);
+  font-size:.6rem;font-weight:700;min-width:16px;height:16px;
+  border-radius:50%;display:none;align-items:center;justify-content:center;
+  padding:0 3px;border:2px solid var(--cream-100);
 }
-.dash-btn.primary .cart-badge{border-color:var(--green-800)}
+.dash-btn.cart .cart-badge{background:var(--orange-500);border-color:var(--green-800)}
 
 .currency-select{
   height:36px;padding:0 26px 0 10px;
-  border-radius:var(--r);border:1px solid var(--line-dark);
-  background:#fff;color:var(--ink);
-  font-size:.8rem;font-weight:600;
+  border-radius:var(--r-sm);border:1px solid var(--rule);
+  background:transparent;color:var(--green-800);
+  font-size:.74rem;font-weight:600;letter-spacing:.02em;
   appearance:none;-webkit-appearance:none;
-  background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234D6355' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
+  background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23123322' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
   background-repeat:no-repeat;background-position:right 8px center;background-size:11px;
-  cursor:pointer;transition:border-color .15s;
+  cursor:pointer;transition:all .16s;
 }
-.currency-select:hover{border-color:var(--green-800)}
+.currency-select:hover{background-color:rgba(11,36,21,.05)}
 
 .menu-toggle{display:inline-flex}
 
-@media(min-width:960px){
-  .nav-links{display:flex}
+@media(min-width:1000px){
+  .dash-nav{display:flex}
   .menu-toggle{display:none}
   .dash-btn .label{display:inline}
 }
 
-/* Mobile nav drawer */
+/* Account dropdown */
+.account-wrap{position:relative}
+.account-dd{
+  position:absolute;top:calc(100% + 10px);right:0;
+  min-width:240px;background:var(--cream-50);
+  border:1px solid var(--rule);border-radius:var(--r);
+  box-shadow:var(--shadow);padding:8px;z-index:60;
+  display:none;
+}
+.account-dd.open{display:block;animation:ddIn .18s ease}
+@keyframes ddIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.account-dd-head{padding:12px 12px 14px;border-bottom:1px solid var(--rule);margin-bottom:6px}
+.account-dd-name{font-family:'Fraunces',serif;font-weight:600;font-size:.95rem;color:var(--green-900);letter-spacing:-.015em}
+.account-dd-email{font-size:.75rem;color:var(--ink-soft);margin-top:3px;word-break:break-all}
+.account-dd-item{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;border-radius:var(--r-sm);
+  font-size:.82rem;font-weight:500;color:var(--green-800);
+  width:100%;text-align:left;
+}
+.account-dd-item:hover{background:var(--green-50)}
+.account-dd-item svg{width:14px;height:14px;opacity:.7}
+.account-dd-item.danger{color:var(--red)}
+.account-dd-item.danger:hover{background:#fdf2f2}
+
+/* Mobile drawer nav */
 .mobile-nav{
-  display:none;background:var(--cream-50);
-  border-bottom:1px solid var(--line);
+  display:none;background:var(--cream-100);
+  border-bottom:1px solid var(--rule);
+  padding:8px var(--pad) 20px;
 }
 .mobile-nav.open{display:block}
-.mobile-nav-inner{padding:8px var(--pad) 20px}
-.mobile-nav a{display:block;padding:14px 0;font-size:.95rem;font-weight:500;color:var(--ink-soft);border-bottom:1px solid var(--line);cursor:pointer}
+.mobile-nav a{
+  display:block;padding:13px 4px;font-size:.92rem;font-weight:500;
+  color:var(--ink-soft);border-bottom:1px solid var(--rule);
+}
 .mobile-nav a:last-of-type{border-bottom:none}
-.mobile-nav .row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
-.mobile-nav .row .btn{flex:1;min-width:120px}
+.mobile-nav .row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.mobile-nav .row .dash-btn{flex:1;justify-content:center;border:1px solid var(--rule);background:var(--cream-50)}
+.mobile-nav .row .dash-btn .label{display:inline}
 
 /* ============================================================
    PAGES
 ============================================================ */
 .page{display:none}
-.page.active{display:block}
+.page.active{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 
 /* ============================================================
    HERO
 ============================================================ */
-.hero{padding:48px 0 64px;background:var(--cream-50)}
-@media(min-width:900px){.hero{padding:72px 0 88px}}
-.hero-grid{display:grid;gap:44px;align-items:center}
-@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:64px}}
+.hero{padding:44px 0 72px;position:relative;overflow:hidden}
+@media(min-width:900px){.hero{padding:72px 0 112px}}
 
-.hero h1{margin-bottom:20px}
-.hero h1 em{font-style:italic;font-weight:500;color:var(--orange-600)}
-.hero p.lead{font-size:1.02rem}
-.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hero-grid{display:grid;gap:44px;align-items:center;position:relative;z-index:1}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.08fr .92fr;gap:72px}}
 
-.hero-points{
-  margin-top:36px;padding-top:28px;border-top:1px solid var(--line);
-  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;
+  color:var(--orange-600);margin-bottom:24px;
 }
-.hero-point-v{font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;color:var(--green-800);letter-spacing:-.02em;line-height:1}
-.hero-point-l{font-size:.75rem;color:var(--ink-soft);margin-top:6px}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--orange-600);opacity:.6}
+
+.hero h1{margin-bottom:24px}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--orange-500)}
+
+.hero p.lead{font-size:1.02rem;max-width:52ch}
+
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+
+.hero-strip{
+  display:flex;flex-wrap:wrap;gap:24px 36px;
+  margin-top:40px;padding-top:26px;border-top:1px solid var(--rule);
+}
+.hero-stat-v{font-family:'Fraunces',serif;font-weight:500;font-size:1.35rem;color:var(--green-800);letter-spacing:-.025em;line-height:1}
+.hero-stat-l{font-size:.7rem;color:var(--ink-soft);margin-top:6px;letter-spacing:.03em}
 
 .hero-visual{position:relative;aspect-ratio:4/5;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
 .hero-visual img{width:100%;height:100%;object-fit:cover}
 
+.hero-float{
+  position:absolute;bottom:20px;left:-16px;
+  background:var(--cream-50);padding:14px 20px;
+  border-radius:var(--r);box-shadow:var(--shadow);
+  display:none;z-index:2;border:1px solid var(--rule);
+}
+@media(min-width:640px){.hero-float{display:block}}
+.hero-float-tag{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange-600)}
+.hero-float-val{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;color:var(--green-800);margin-top:4px}
+
 /* ============================================================
-   TRUST STRIP
+   TRUST MARQUEE
 ============================================================ */
-.trust-strip{
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  background:var(--cream-100);
+.trust-bar{
+  background:var(--green-900);color:var(--cream-50);
+  padding:20px 0;overflow:hidden;
 }
-.trust-inner{
-  display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:center;
-  padding:22px var(--pad);max-width:var(--container);margin:0 auto;
-}
+.trust-track{display:flex;gap:56px;white-space:nowrap;animation:scroll 44s linear infinite}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .trust-item{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:.82rem;font-weight:500;color:var(--ink-soft);
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:'Fraunces',serif;font-style:italic;font-size:.86rem;
+  color:rgba(252,250,245,.72);flex-shrink:0;
 }
-.trust-item svg{width:15px;height:15px;color:var(--green-600);flex-shrink:0}
+.trust-item::before{content:'✦';color:var(--orange-400);font-size:.7rem;font-style:normal}
 
 /* ============================================================
    CATEGORY GRID
 ============================================================ */
-.cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 @media(min-width:640px){.cat-grid{grid-template-columns:repeat(3,1fr);gap:16px}}
 @media(min-width:1024px){.cat-grid{grid-template-columns:repeat(6,1fr)}}
 
@@ -273,13 +325,12 @@ h1,h2,h3,h4{color:var(--green-900);font-weight:700;letter-spacing:-.02em;line-he
   position:relative;aspect-ratio:3/4;border-radius:var(--r);
   overflow:hidden;cursor:pointer;background:var(--cream-200);
 }
-.cat-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.cat-card:hover img{transform:scale(1.05)}
-.cat-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,36,23,.85) 0%,rgba(11,36,23,.1) 55%,transparent 100%)}
-.cat-card-label{
-  position:absolute;left:0;right:0;bottom:0;padding:14px 12px;
-  color:#fff;font-weight:600;font-size:.88rem;line-height:1.2;
-}
+.cat-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.cat-card:hover img{transform:scale(1.06)}
+.cat-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,23,13,.88) 0%,rgba(6,23,13,.15) 55%,transparent 100%)}
+.cat-card-label{position:absolute;left:0;right:0;bottom:0;padding:14px 12px;color:var(--cream-50)}
+.cat-card-label .num{font-family:'Fraunces',serif;font-style:italic;font-size:.68rem;color:var(--orange-400);opacity:.9}
+.cat-card-label .name{font-family:'Fraunces',serif;font-weight:500;font-size:.88rem;line-height:1.15;margin-top:3px}
 
 /* ============================================================
    PRODUCT GRID
@@ -289,289 +340,248 @@ h1,h2,h3,h4{color:var(--green-900);font-weight:700;letter-spacing:-.02em;line-he
 @media(min-width:1024px){.prod-grid{grid-template-columns:repeat(4,1fr);gap:22px}}
 
 .prod{
-  background:#fff;border-radius:var(--r);overflow:hidden;cursor:pointer;
-  border:1px solid var(--line);transition:border-color .18s, box-shadow .18s;
+  background:var(--cream-50);border-radius:var(--r);
+  overflow:hidden;cursor:pointer;
+  border:1px solid var(--rule);
+  transition:all .22s cubic-bezier(.2,.8,.2,1);
   display:flex;flex-direction:column;
 }
-.prod:hover{border-color:var(--line-dark);box-shadow:var(--shadow)}
+.prod:hover{border-color:var(--rule-strong);transform:translateY(-2px)}
 
-.prod-img{position:relative;aspect-ratio:1;overflow:hidden;background:var(--cream-100)}
-.prod-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.prod-img{position:relative;aspect-ratio:1;overflow:hidden;background:var(--cream-200)}
+.prod-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 .prod:hover .prod-img img{transform:scale(1.04)}
 
 .prod-tag{
   position:absolute;top:10px;left:10px;
-  font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  padding:4px 8px;border-radius:4px;
-  background:var(--green-800);color:#fff;
+  font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 8px;border-radius:var(--r-xs);
+  background:var(--green-800);color:var(--cream-50);
 }
-.prod-tag.best{background:var(--orange-500)}
-.prod-tag.wholesale{background:var(--orange-600)}
+.prod-tag.bestseller{background:var(--orange-500)}
+.prod-tag.wholesale{background:var(--orange-500)}
 
-.prod-body{padding:12px 14px 16px;display:flex;flex-direction:column;flex:1}
-.prod-name{font-weight:600;font-size:.92rem;line-height:1.3;color:var(--green-900);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.prod-meta{font-size:.72rem;color:var(--ink-mute);margin-top:4px}
-.prod-price{margin-top:8px;font-weight:700;font-size:.98rem;color:var(--green-800);letter-spacing:-.01em}
-.prod-sizes{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
-.prod-size{
-  font-size:.66rem;font-weight:500;color:var(--ink-soft);
-  padding:2px 7px;border-radius:3px;background:var(--cream-100);
-}
+.prod-body{padding:13px 14px 16px;display:flex;flex-direction:column;flex:1}
+.prod-name{font-family:'Fraunces',serif;font-weight:500;font-size:.98rem;line-height:1.2;color:var(--green-900);letter-spacing:-.015em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.prod-meta{font-size:.68rem;color:var(--ink-faint);margin-top:5px;letter-spacing:.04em;text-transform:uppercase;font-weight:600}
+.prod-price{margin-top:9px;font-family:'Fraunces',serif;font-weight:600;font-size:1.02rem;color:var(--green-800);letter-spacing:-.012em}
+.prod-sizes{display:flex;flex-wrap:wrap;gap:4px;margin-top:11px}
+.prod-size{font-size:.64rem;font-weight:500;color:var(--ink-soft);padding:2px 7px;border-radius:3px;background:var(--cream-200)}
 
 /* ============================================================
-   VALUE / ABOUT BLOCK
+   EDITORIAL BAND
 ============================================================ */
-.values{
-  background:var(--green-900);color:#E8E4DA;
-  padding:72px 0;
-}
-@media(min-width:768px){.values{padding:96px 0}}
-.values-grid{display:grid;gap:40px;align-items:center}
-@media(min-width:900px){.values-grid{grid-template-columns:1fr 1fr;gap:64px}}
-.values h2{color:#fff;font-family:'Fraunces',serif;font-weight:600;letter-spacing:-.025em}
-.values p{color:rgba(232,228,218,.72);line-height:1.7}
-.values .eyebrow{color:var(--orange-500)}
+.editorial{background:var(--green-900);color:var(--cream-50);padding:88px 0;position:relative;overflow:hidden}
+.editorial::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(217,119,6,.14) 0%,transparent 65%);pointer-events:none}
+.editorial-grid{display:grid;gap:40px;position:relative;z-index:1}
+@media(min-width:900px){.editorial-grid{grid-template-columns:1fr 1fr;gap:72px;align-items:center}}
+.editorial .h-1{color:var(--cream-50)}
+.editorial .lead{color:rgba(252,250,245,.7)}
+.editorial .marker-label{color:var(--orange-400)}
+.editorial .marker-line{background:var(--orange-400);opacity:.5}
+.editorial .marker-num{color:var(--orange-400)}
 
-.value-list{margin-top:32px;display:flex;flex-direction:column;gap:22px}
-.value-item{display:flex;gap:16px;align-items:flex-start}
-.value-ico{
-  width:40px;height:40px;border-radius:var(--r);
-  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+.feature-list{margin-top:32px;display:flex;flex-direction:column;gap:22px}
+.feature-item{display:flex;gap:16px;align-items:flex-start}
+.feature-ico{
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(252,250,245,.07);border:1px solid rgba(252,250,245,.12);
   display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  color:var(--orange-500);
+  color:var(--orange-400);
 }
-.value-ico svg{width:18px;height:18px}
-.value-ttl{font-weight:600;font-size:.98rem;color:#fff}
-.value-dsc{font-size:.87rem;color:rgba(232,228,218,.7);margin-top:3px;line-height:1.55}
-
-/* ============================================================
-   PAGE HEAD
-============================================================ */
-.page-head{padding:44px 0 24px;text-align:center}
-@media(min-width:768px){.page-head{padding:64px 0 32px}}
-.page-head .lead{margin:12px auto 0}
-
-/* ============================================================
-   FILTER CHIPS
-============================================================ */
-.filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:28px 0}
-.chip{
-  padding:8px 14px;border-radius:100px;
-  font-size:.8rem;font-weight:500;
-  background:#fff;color:var(--ink);
-  border:1px solid var(--line-dark);transition:all .15s;
-}
-.chip:hover{border-color:var(--green-800)}
-.chip.active{background:var(--green-800);color:#fff;border-color:var(--green-800)}
+.feature-ico svg{width:18px;height:18px}
+.feature-ttl{font-family:'Fraunces',serif;font-weight:500;font-size:1rem;color:var(--cream-50);letter-spacing:-.01em}
+.feature-dsc{font-size:.85rem;color:rgba(252,250,245,.62);margin-top:3px;line-height:1.55}
 
 /* ============================================================
    REVIEWS
 ============================================================ */
-.review-grid{display:grid;gap:16px;margin-top:36px}
-@media(min-width:768px){.review-grid{grid-template-columns:repeat(3,1fr);gap:20px}}
-.review-card{
-  background:#fff;border:1px solid var(--line);
-  border-radius:var(--r);padding:22px;
-}
+.review-strip{display:grid;gap:16px;margin-top:40px}
+@media(min-width:768px){.review-strip{grid-template-columns:repeat(3,1fr);gap:20px}}
+.review-card{background:var(--cream-50);border:1px solid var(--rule);border-radius:var(--r);padding:22px}
 .stars{display:flex;gap:2px;margin-bottom:12px}
-.stars svg{width:15px;height:15px;fill:var(--orange-500);color:var(--orange-500)}
-.stars svg.empty{fill:var(--cream-200);color:var(--cream-200)}
-.review-body{font-size:.95rem;line-height:1.55;color:var(--ink);font-weight:500}
-.review-author{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink-soft)}
+.stars svg{width:14px;height:14px;fill:var(--orange-500);color:var(--orange-500)}
+.stars svg.empty{fill:none;stroke:var(--cream-300);color:var(--cream-300);stroke-width:1.5}
+.review-body{font-family:'Fraunces',serif;font-size:.98rem;line-height:1.5;color:var(--green-900);letter-spacing:-.008em}
+.review-author{margin-top:16px;padding-top:14px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;font-size:.74rem;color:var(--ink-soft)}
 .review-author strong{font-weight:600;color:var(--green-800)}
+
+/* ============================================================
+   PAGE HEADER
+============================================================ */
+.page-head{padding:52px 0 28px;text-align:center}
+@media(min-width:768px){.page-head{padding:72px 0 36px}}
+.page-head .lead{margin:14px auto 0}
+
+/* ============================================================
+   FILTER CHIPS
+============================================================ */
+.filters{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:28px 0}
+.chip{
+  padding:8px 16px;border-radius:var(--r-pill);
+  font-size:.78rem;font-weight:500;
+  background:var(--cream-50);color:var(--green-800);
+  border:1px solid var(--rule);transition:all .16s;
+}
+.chip:hover{border-color:var(--green-800)}
+.chip.active{background:var(--green-800);color:var(--cream-50);border-color:var(--green-800)}
 
 /* ============================================================
    MODALS
 ============================================================ */
 .modal-bg{
-  position:fixed;inset:0;background:rgba(11,36,23,.55);
-  z-index:200;display:none;align-items:flex-start;justify-content:center;
-  padding:20px;overflow-y:auto;
+  position:fixed;inset:0;background:rgba(6,23,13,.6);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  z-index:200;display:none;align-items:center;justify-content:center;
+  padding:16px;overflow-y:auto;
 }
 .modal-bg.open{display:flex}
 .modal{
-  background:var(--cream-50);border-radius:var(--r-lg);
-  width:100%;max-width:700px;margin:auto;
+  background:var(--cream-100);border-radius:var(--r-lg);
+  width:100%;max-width:680px;max-height:90vh;overflow-y:auto;
   position:relative;box-shadow:var(--shadow-lg);
-  animation:modalIn .22s ease;
+  animation:modalIn .28s cubic-bezier(.2,.8,.2,1);
 }
-.modal.wide{max-width:900px}
-.modal.narrow{max-width:440px}
-@keyframes modalIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.modal.wide{max-width:880px}
+.modal.narrow{max-width:420px}
+@keyframes modalIn{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
 
 .modal-close{
   position:absolute;top:14px;right:14px;z-index:2;
-  width:34px;height:34px;border-radius:100px;
+  width:34px;height:34px;border-radius:50%;
   background:rgba(255,255,255,.94);color:var(--green-900);
   display:flex;align-items:center;justify-content:center;
-  border:1px solid var(--line);transition:transform .18s;
+  box-shadow:var(--shadow-xs);transition:all .18s;
 }
-.modal-close:hover{transform:rotate(90deg)}
+.modal-close:hover{background:#fff;transform:rotate(90deg)}
 .modal-close svg{width:15px;height:15px}
 
-.modal-head{padding:32px 28px 18px;border-bottom:1px solid var(--line)}
-@media(min-width:640px){.modal-head{padding:36px 36px 20px}}
-.modal-head .eyebrow{margin-bottom:10px}
-.modal-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.4rem,2.6vw,1.9rem);letter-spacing:-.025em;color:var(--green-900);line-height:1.15}
-.modal-head p{color:var(--ink-soft);margin-top:10px;font-size:.92rem;max-width:62ch}
+.modal-head{padding:32px 28px 18px;border-bottom:1px solid var(--rule)}
+@media(min-width:640px){.modal-head{padding:40px 40px 22px}}
+.modal-head .marker{margin-bottom:12px}
+.modal-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.4rem,2.8vw,1.85rem);letter-spacing:-.028em;color:var(--green-900);line-height:1.08}
+.modal-head p{color:var(--ink-soft);margin-top:10px;font-size:.9rem;max-width:60ch}
 
-.modal-body{padding:26px}
-@media(min-width:640px){.modal-body{padding:36px}}
+.modal-body{padding:28px}
+@media(min-width:640px){.modal-body{padding:40px}}
 
 /* Policy content */
-.policy{font-size:.94rem;line-height:1.7}
-.policy h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;letter-spacing:-.015em;color:var(--green-900);margin:26px 0 10px}
+.policy h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.1rem;letter-spacing:-.018em;color:var(--green-900);margin:26px 0 10px}
 .policy h3:first-child{margin-top:0}
-.policy p,.policy li{color:var(--ink-soft);line-height:1.7}
-.policy ul{margin:10px 0;padding-left:20px}
-.policy li{margin-bottom:6px}
+.policy p,.policy li{font-size:.9rem;color:var(--ink-soft);line-height:1.7}
+.policy ul{margin:10px 0;padding-left:18px}
+.policy li{margin-bottom:7px}
 .policy li::marker{color:var(--orange-500)}
 .policy strong{color:var(--green-900);font-weight:600}
-.policy .note{
-  background:var(--orange-50);border-left:3px solid var(--orange-500);
-  padding:14px 18px;border-radius:0 var(--r-sm) var(--r-sm) 0;
-  margin:18px 0;font-size:.9rem;color:var(--green-900);line-height:1.65;
-}
-.policy .note strong{color:var(--orange-700)}
+.policy .note{background:var(--orange-50);border-left:3px solid var(--orange-500);padding:14px 18px;border-radius:0 var(--r-sm) var(--r-sm) 0;margin:18px 0;font-size:.86rem;color:var(--green-900);line-height:1.65}
 
 /* ============================================================
-   AUTH MODAL
+   AUTH MODAL (polished)
 ============================================================ */
-.auth-wrap{padding:36px 28px 32px}
-@media(min-width:640px){.auth-wrap{padding:44px 40px 36px}}
+.auth-logo{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:22px}
+.auth-logo svg{width:56px;height:56px;margin-bottom:12px}
+.auth-logo-text{font-family:'Fraunces',serif;font-weight:600;font-size:1.45rem;letter-spacing:-.035em;color:var(--green-800);text-align:center;line-height:1}
+.auth-logo-sub{font-size:.56rem;font-weight:700;letter-spacing:.36em;color:var(--orange-500);margin-top:6px;text-align:center}
 
-.auth-logo{display:flex;flex-direction:column;align-items:center;margin-bottom:26px}
-.auth-logo-mark{
-  width:52px;height:52px;border-radius:12px;
-  background:var(--green-800);
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:14px;color:#fff;
-}
-.auth-logo-mark svg{width:26px;height:26px}
-.auth-logo-text{font-family:'Fraunces',serif;font-weight:700;font-size:1.4rem;letter-spacing:-.03em;color:var(--green-800);line-height:1}
-.auth-logo-sub{font-size:.56rem;font-weight:700;letter-spacing:.3em;color:var(--orange-500);margin-top:5px}
-
-.auth-tabs{
-  display:flex;gap:3px;padding:3px;background:var(--cream-200);
-  border-radius:var(--r);margin-bottom:24px;
-}
+.auth-tabs{display:flex;gap:3px;padding:3px;background:var(--cream-200);border-radius:var(--r);margin-bottom:22px}
 .auth-tab{
-  flex:1;padding:9px 14px;border-radius:7px;
-  font-size:.85rem;font-weight:600;color:var(--ink-soft);
-  transition:all .15s;
+  flex:1;padding:10px 14px;border-radius:var(--r-sm);
+  font-size:.82rem;font-weight:600;color:var(--ink-soft);
+  transition:all .16s;
 }
-.auth-tab.active{background:#fff;color:var(--green-800);box-shadow:var(--shadow-sm)}
+.auth-tab.active{background:var(--green-800);color:var(--cream-50)}
 
 .auth-form{display:flex;flex-direction:column;gap:16px}
 
+.field{position:relative}
 .field label{
-  display:block;font-size:.75rem;font-weight:600;
-  letter-spacing:.02em;color:var(--ink);margin-bottom:7px;
+  display:block;font-size:.68rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-soft);margin-bottom:7px;
 }
 .field input,.field textarea,.field select{
-  width:100%;padding:12px 14px;
-  border:1px solid var(--line-dark);border-radius:var(--r-sm);
-  background:#fff;color:var(--ink);transition:border-color .15s, box-shadow .15s;
-  font-size:.94rem;
+  width:100%;padding:13px 15px;
+  border:1px solid var(--rule-strong);border-radius:var(--r-sm);
+  background:var(--cream-50);color:var(--green-900);
+  transition:all .16s;font-size:.93rem;
 }
 .field input:focus,.field textarea:focus,.field select:focus{
-  outline:none;border-color:var(--green-700);box-shadow:0 0 0 3px rgba(45,106,79,.13);
+  outline:none;border-color:var(--green-700);
+  box-shadow:0 0 0 3px rgba(27,67,50,.09);background:#fff;
 }
 
-.auth-aux{display:flex;justify-content:flex-end;font-size:.82rem;margin-top:-4px}
-.auth-link{color:var(--orange-600);font-weight:600;cursor:pointer;background:none;padding:0;font-size:inherit}
+.auth-aux{display:flex;justify-content:space-between;align-items:center;font-size:.78rem;margin-top:-4px}
+.auth-link{color:var(--orange-600);font-weight:600;cursor:pointer;background:none;border:none;padding:0;font-family:inherit;font-size:inherit}
 .auth-link:hover{text-decoration:underline}
 
-.auth-msg{padding:11px 14px;border-radius:var(--r-sm);font-size:.85rem;line-height:1.5}
-.auth-msg.error{background:var(--red-bg);color:var(--red);border:1px solid #FECDCA}
+.auth-msg{padding:11px 15px;border-radius:var(--r-sm);font-size:.82rem;line-height:1.5}
+.auth-msg.error{background:#fef2f2;color:var(--red);border:1px solid #fecaca}
 .auth-msg.success{background:var(--green-50);color:var(--green-700);border:1px solid var(--green-100)}
 
-.auth-foot{
-  text-align:center;font-size:.75rem;color:var(--ink-mute);
-  margin-top:20px;line-height:1.6;
-}
+.auth-foot{text-align:center;font-size:.72rem;color:var(--ink-faint);margin-top:18px;line-height:1.6}
 
 /* ============================================================
    CART DRAWER
 ============================================================ */
-.drawer-bg{
-  position:fixed;inset:0;background:rgba(11,36,23,.45);
-  z-index:190;display:none;opacity:0;transition:opacity .25s;
-}
+.drawer-bg{position:fixed;inset:0;background:rgba(6,23,13,.5);backdrop-filter:blur(4px);z-index:190;display:none;opacity:0;transition:opacity .3s}
 .drawer-bg.open{display:block;opacity:1}
 
 .drawer{
   position:fixed;top:0;right:0;bottom:0;
-  width:100%;max-width:420px;background:var(--cream-50);
+  width:100%;max-width:420px;background:var(--cream-100);
   z-index:195;display:flex;flex-direction:column;
-  transform:translateX(100%);transition:transform .3s ease;
-  box-shadow:-16px 0 40px rgba(11,36,23,.15);
+  transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);
+  box-shadow:-20px 0 60px rgba(6,23,13,.2);
 }
 .drawer.open{transform:translateX(0)}
 
-.drawer-head{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:20px 22px;border-bottom:1px solid var(--line);
-}
-.drawer-title{font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;letter-spacing:-.02em}
-.drawer-x{
-  width:34px;height:34px;border-radius:100px;
-  display:flex;align-items:center;justify-content:center;
-  background:#fff;border:1px solid var(--line);color:var(--ink);
-}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:22px;border-bottom:1px solid var(--rule)}
+.drawer-title{font-family:'Fraunces',serif;font-weight:500;font-size:1.18rem;letter-spacing:-.02em}
+.drawer-x{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--cream-50);color:var(--green-900)}
 .drawer-x svg{width:15px;height:15px}
+.drawer-body{flex:1;overflow-y:auto;padding:18px 22px}
 
-.drawer-body{flex:1;overflow-y:auto;padding:16px 22px}
+.cart-empty{text-align:center;padding:72px 20px}
+.cart-empty-ico{width:64px;height:64px;border-radius:50%;background:var(--green-50);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:var(--green-700)}
+.cart-empty-ico svg{width:28px;height:28px}
+.cart-empty h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.18rem;margin-bottom:6px}
+.cart-empty p{color:var(--ink-soft);font-size:.86rem}
 
-.cart-empty{text-align:center;padding:70px 16px}
-.cart-empty-ico{
-  width:60px;height:60px;border-radius:100px;
-  background:var(--green-50);display:flex;align-items:center;justify-content:center;
-  margin:0 auto 18px;color:var(--green-700);
-}
-.cart-empty-ico svg{width:26px;height:26px}
-.cart-empty h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;margin-bottom:6px}
-.cart-empty p{color:var(--ink-soft);font-size:.88rem}
-
-.cart-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.cart-row{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule)}
 .cart-row:last-child{border-bottom:none}
 .cart-img{width:70px;height:70px;border-radius:var(--r-sm);overflow:hidden;background:var(--cream-200);flex-shrink:0}
 .cart-img img{width:100%;height:100%;object-fit:cover}
 .cart-info{flex:1;min-width:0}
-.cart-nm{font-weight:600;font-size:.92rem;color:var(--green-900);line-height:1.25}
-.cart-sz{font-size:.72rem;color:var(--ink-soft);margin-top:2px}
-.cart-pr{font-weight:700;font-size:.92rem;color:var(--green-800);margin-top:6px}
-.cart-controls{display:flex;gap:12px;align-items:center;margin-top:8px}
-.qty{
-  display:inline-flex;align-items:center;
-  background:#fff;border:1px solid var(--line-dark);border-radius:var(--r-sm);
-}
-.qty button{padding:4px 10px;font-size:.9rem;font-weight:700;color:var(--green-700)}
+.cart-nm{font-family:'Fraunces',serif;font-weight:500;font-size:.92rem;color:var(--green-900);line-height:1.22}
+.cart-sz{font-size:.68rem;color:var(--ink-soft);margin-top:3px;letter-spacing:.03em}
+.cart-pr{font-family:'Fraunces',serif;font-weight:600;font-size:.92rem;color:var(--green-800);margin-top:7px}
+.cart-controls{display:flex;gap:10px;align-items:center;margin-top:9px}
+.qty{display:inline-flex;align-items:center;background:var(--cream-50);border:1px solid var(--rule);border-radius:var(--r-sm)}
+.qty button{padding:4px 11px;font-size:.9rem;font-weight:700;color:var(--green-700)}
 .qty button:hover{color:var(--orange-500)}
-.qty span{padding:0 6px;font-size:.82rem;font-weight:600}
-.cart-rm{font-size:.75rem;color:var(--red);font-weight:600}
+.qty span{padding:0 7px;font-size:.8rem;font-weight:600}
+.cart-rm{font-size:.72rem;color:var(--red);font-weight:600}
 .cart-rm:hover{text-decoration:underline}
 
-.drawer-foot{border-top:1px solid var(--line);padding:20px 22px;background:#fff}
-.sum-row{display:flex;justify-content:space-between;font-size:.86rem;padding:5px 0;color:var(--ink-soft)}
-.sum-row strong{color:var(--ink);font-weight:600}
-.sum-row.total{padding-top:12px;margin-top:8px;border-top:1px solid var(--line);font-size:1rem;color:var(--ink);font-weight:700}
+.drawer-foot{border-top:1px solid var(--rule);padding:20px 22px;background:#fff}
+.sum-row{display:flex;justify-content:space-between;font-size:.85rem;padding:5px 0}
+.sum-row.total{padding-top:12px;margin-top:6px;border-top:1px solid var(--rule);font-size:1rem;font-weight:700}
 .sum-row.total span:last-child{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--green-800)}
 
 /* ============================================================
    FORMS / CHECKOUT
 ============================================================ */
-.form-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
-@media(min-width:640px){.form-card{padding:32px}}
+.form-card{background:var(--cream-50);border:1px solid var(--rule);border-radius:var(--r);padding:24px}
+@media(min-width:640px){.form-card{padding:36px}}
 .form-grid{display:grid;gap:16px}
 .form-2{display:grid;gap:16px}
 @media(min-width:640px){.form-2{grid-template-columns:1fr 1fr}}
 
 .checkout-wrap{display:grid;gap:28px;margin-top:32px}
-@media(min-width:1024px){.checkout-wrap{grid-template-columns:1.5fr 1fr;gap:40px;align-items:start}}
+@media(min-width:1024px){.checkout-wrap{grid-template-columns:3fr 2fr;gap:44px;align-items:start}}
 
-.sum-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;position:sticky;top:82px}
-.sum-item{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.85rem}
+.sum-card{background:var(--cream-50);border:1px solid var(--rule);border-radius:var(--r);padding:22px;position:sticky;top:88px}
+.sum-item{display:flex;gap:11px;padding:11px 0;border-bottom:1px solid var(--rule);font-size:.83rem}
 .sum-item:last-child{border-bottom:none}
 .sum-img{width:48px;height:48px;border-radius:var(--r-sm);overflow:hidden;flex-shrink:0;background:var(--cream-200)}
 .sum-img img{width:100%;height:100%;object-fit:cover}
@@ -579,147 +589,108 @@ h1,h2,h3,h4{color:var(--green-900);font-weight:700;letter-spacing:-.02em;line-he
 /* ============================================================
    FAQ
 ============================================================ */
-.faq-list{max-width:760px;margin:32px auto 0}
-.faq{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px;overflow:hidden}
-.faq summary{
-  padding:18px 22px;font-weight:600;font-size:.98rem;
-  letter-spacing:-.01em;color:var(--green-900);cursor:pointer;
-  display:flex;justify-content:space-between;gap:16px;align-items:center;
-  list-style:none;
-}
+.faq-list{max-width:780px;margin:36px auto 0}
+.faq{background:var(--cream-50);border:1px solid var(--rule);border-radius:var(--r);margin-bottom:10px;overflow:hidden}
+.faq summary{padding:20px 24px;font-family:'Fraunces',serif;font-weight:500;font-size:.98rem;letter-spacing:-.012em;color:var(--green-900);cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;list-style:none}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:'+';font-size:1.4rem;font-weight:400;color:var(--orange-500);line-height:1;transition:transform .2s}
+.faq summary::after{content:'+';font-size:1.5rem;font-weight:400;color:var(--orange-500);line-height:1;transition:transform .25s;font-family:'Fraunces',serif}
 .faq[open] summary::after{transform:rotate(45deg)}
-.faq p{padding:0 22px 20px;font-size:.9rem;color:var(--ink-soft);line-height:1.7}
+.faq p{padding:0 24px 22px;font-size:.88rem;color:var(--ink-soft);line-height:1.7}
 
 /* ============================================================
    CONTACT
 ============================================================ */
-.contact-grid{display:grid;gap:14px;margin-top:36px}
+.contact-grid{display:grid;gap:16px;margin-top:36px}
 @media(min-width:640px){.contact-grid{grid-template-columns:1fr 1fr}}
-.contact-card{
-  background:#fff;border:1px solid var(--line);
-  border-radius:var(--r);padding:22px;transition:border-color .18s;
-  display:block;cursor:pointer;
-}
-.contact-card:hover{border-color:var(--line-dark)}
+.contact-card{background:var(--cream-50);border:1px solid var(--rule);border-radius:var(--r);padding:24px;transition:all .2s;display:block}
+.contact-card:hover{border-color:var(--rule-strong);transform:translateY(-2px)}
 .contact-card svg{width:22px;height:22px;color:var(--green-700);margin-bottom:14px}
 .contact-card.accent svg{color:var(--orange-500)}
-.contact-card h3{font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
-.contact-card p{font-size:.86rem;color:var(--ink-soft);margin-top:4px}
-.contact-card strong{display:block;color:var(--green-700);margin-top:12px;font-size:.88rem;font-weight:600}
+.contact-card h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.1rem;letter-spacing:-.018em}
+.contact-card p{font-size:.85rem;color:var(--ink-soft);margin-top:5px}
+.contact-card strong{display:block;color:var(--green-700);margin-top:12px;font-size:.86rem;font-weight:600}
 
 /* ============================================================
    FOOTER
 ============================================================ */
-.footer{background:var(--green-900);color:#E8E4DA;margin-top:72px}
-.foot-grid{display:grid;gap:32px;padding:56px 0 36px}
-@media(min-width:768px){.foot-grid{grid-template-columns:2fr 1fr 1fr;gap:48px}}
-.foot-brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.4rem;letter-spacing:-.025em;color:#fff}
-.foot-brand-sub{font-size:.55rem;font-weight:700;letter-spacing:.3em;color:var(--orange-500);margin-top:4px}
-.foot-desc{font-size:.88rem;color:rgba(232,228,218,.6);margin-top:18px;max-width:38ch;line-height:1.65}
-.foot-social{display:inline-flex;align-items:center;gap:8px;margin-top:22px;color:rgba(232,228,218,.7);font-size:.86rem;font-weight:500}
-.foot-social:hover{color:var(--orange-500)}
-.foot-social svg{width:16px;height:16px}
-.footer h4{font-weight:600;font-size:.95rem;color:#fff;letter-spacing:-.005em}
-.footer ul{list-style:none;margin-top:16px}
+.footer{background:var(--green-950);color:var(--cream-50);margin-top:72px}
+.foot-grid{display:grid;gap:36px;padding:64px 0 40px}
+@media(min-width:768px){.foot-grid{grid-template-columns:2fr 1fr 1fr;gap:52px}}
+.foot-logo-main{font-family:'Fraunces',serif;font-weight:600;font-size:1.45rem;letter-spacing:-.032em}
+.foot-logo-sub{font-size:.52rem;font-weight:700;letter-spacing:.34em;color:var(--orange-400);margin-top:4px}
+.foot-desc{font-size:.86rem;color:rgba(252,250,245,.58);margin-top:18px;max-width:38ch;line-height:1.7}
+.foot-socials{display:flex;gap:8px;margin-top:22px}
+.foot-social{width:36px;height:36px;border-radius:50%;background:rgba(252,250,245,.07);border:1px solid rgba(252,250,245,.1);display:flex;align-items:center;justify-content:center;transition:all .2s}
+.foot-social:hover{background:var(--orange-500);border-color:var(--orange-500)}
+.foot-social svg{width:15px;height:15px}
+.footer h4{font-family:'Fraunces',serif;font-weight:500;font-size:.98rem;letter-spacing:-.01em}
+.footer ul{list-style:none;margin-top:18px}
 .footer ul li{padding:5px 0}
-.footer ul a,.footer ul span{font-size:.86rem;color:rgba(232,228,218,.65);transition:color .15s;cursor:pointer}
-.footer ul a:hover{color:var(--orange-500)}
-.foot-bottom{
-  border-top:1px solid rgba(232,228,218,.08);
-  padding:22px 0;display:flex;flex-direction:column;gap:6px;
-  align-items:center;text-align:center;
-  font-size:.75rem;color:rgba(232,228,218,.5);
-}
+.footer ul a,.footer ul span{font-size:.85rem;color:rgba(252,250,245,.58);transition:color .18s;cursor:pointer}
+.footer ul a:hover,.footer ul span:hover{color:var(--orange-400)}
+.foot-bottom{border-top:1px solid rgba(252,250,245,.08);padding:22px 0;display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;font-size:.72rem;color:rgba(252,250,245,.48)}
 @media(min-width:640px){.foot-bottom{flex-direction:row;justify-content:space-between}}
 
 /* ============================================================
    WHATSAPP FLOAT
 ============================================================ */
-.wa-float{
-  position:fixed;bottom:18px;right:18px;
-  width:52px;height:52px;border-radius:100px;
-  background:#25D366;color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 10px 24px -6px rgba(37,211,102,.5);
-  z-index:100;transition:transform .2s;
-}
-.wa-float:hover{transform:scale(1.06)}
+.wa-float{position:fixed;bottom:20px;right:20px;width:52px;height:52px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -8px rgba(37,211,102,.55);z-index:100;transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:24px;height:24px}
 
 /* ============================================================
    TOAST
 ============================================================ */
-.toast{
-  position:fixed;bottom:88px;left:50%;
-  transform:translateX(-50%) translateY(16px);
-  background:var(--green-900);color:#fff;
-  padding:12px 20px;border-radius:var(--r);
-  font-size:.86rem;font-weight:500;
-  box-shadow:var(--shadow-lg);z-index:300;
-  opacity:0;pointer-events:none;transition:all .25s;
-  display:flex;align-items:center;gap:10px;max-width:calc(100vw - 40px);
-}
+.toast{position:fixed;bottom:88px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--green-900);color:var(--cream-50);padding:12px 22px;border-radius:var(--r-pill);font-size:.85rem;font-weight:500;box-shadow:var(--shadow-lg);z-index:300;opacity:0;pointer-events:none;transition:all .3s;display:flex;align-items:center;gap:9px}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.toast svg{width:15px;height:15px;color:var(--orange-500);flex-shrink:0}
+.toast svg{width:15px;height:15px;color:var(--orange-400)}
 
 body.no-scroll{overflow:hidden}
 
 /* ============================================================
-   REVIEWS LIST (in modal)
+   REVIEWS LIST (modal)
 ============================================================ */
-.reviews-summary{
-  background:#fff;border:1px solid var(--line);
-  border-radius:var(--r);padding:20px;margin-bottom:22px;
-  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
-}
-.reviews-score{font-family:'Fraunces',serif;font-weight:600;font-size:2.6rem;color:var(--green-800);line-height:1;letter-spacing:-.03em}
-.reviews-meta{flex:1;min-width:180px}
+.reviews-summary{background:var(--cream-50);border:1px solid var(--rule);border-radius:var(--r);padding:22px;margin-bottom:24px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.reviews-score{font-family:'Fraunces',serif;font-weight:600;font-size:2.8rem;color:var(--green-800);line-height:1;letter-spacing:-.035em}
+.reviews-meta{flex:1}
 .reviews-meta .stars{margin-bottom:6px}
 .reviews-meta p{font-size:.8rem;color:var(--ink-soft)}
 
-.reviews-list{display:flex;flex-direction:column;gap:12px}
-.review-row{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.reviews-list{display:flex;flex-direction:column;gap:14px}
+.review-row{background:var(--cream-50);border:1px solid var(--rule);border-radius:var(--r);padding:20px}
 .review-row .stars{margin-bottom:10px}
 .review-row .stars svg{width:13px;height:13px}
-.review-row .body{font-size:.92rem;line-height:1.55;color:var(--ink);font-weight:500}
-.review-row .meta{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:.74rem;color:var(--ink-soft);flex-wrap:wrap;gap:6px}
+.review-row .body{font-family:'Fraunces',serif;font-size:.92rem;line-height:1.55;color:var(--green-900);letter-spacing:-.008em}
+.review-row .meta{margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;font-size:.74rem;color:var(--ink-soft)}
 .review-row .meta strong{font-weight:600;color:var(--green-800)}
 
-/* Responsive trims */
 @media(max-width:640px){
-  .brand-main{font-size:1.1rem}
-  .brand-sub{font-size:.44rem;letter-spacing:.24em}
-  .hero-points{grid-template-columns:1fr 1fr}
-  .hero-points>div:nth-child(3){grid-column:1/-1}
-  .modal{margin:8px auto}
-  .modal-head{padding:26px 22px 16px}
-  .modal-body{padding:22px}
+  .dash-logo-main{font-size:1.1rem}
+  .dash-logo-sub{font-size:.4rem;letter-spacing:.28em}
+  .hero-strip{gap:18px 28px}
 }
+
+.hide-mobile{display:none}
+@media(min-width:1000px){.hide-mobile{display:inline-flex}}
 </style>
 </head>
 
 <body>
 
-<!-- ============================================================
-     ANNOUNCEMENT
-============================================================ -->
+<!-- ANNOUNCEMENT -->
 <div class="announce">
-  UK delivery in <strong>3 days</strong> &nbsp;·&nbsp; International <strong>7–10 days</strong> &nbsp;·&nbsp; Free UK shipping over £40
+  <strong>UK:</strong> Delivered in 3 days <span class="sep">·</span> <strong>Worldwide:</strong> 7–10 days <span class="sep">·</span> Free UK shipping over £40
 </div>
 
-<!-- ============================================================
-     STICKY DASHBOARD
-============================================================ -->
+<!-- DASHBOARD -->
 <header class="dashboard">
   <div class="dash-row">
-    <div class="brand" onclick="go('home')" role="button" tabindex="0" aria-label="Yethy home">
-      <span class="brand-main">YETHY</span>
-      <span class="brand-sub">AFRICAN PANTRY</span>
+    <div class="dash-logo" onclick="go('home')">
+      <span class="dash-logo-main">YETHY</span>
+      <span class="dash-logo-sub">AFRICAN PANTRY</span>
     </div>
 
-    <nav class="nav-links" aria-label="Primary">
+    <nav class="dash-nav">
       <a onclick="go('home')">Home</a>
       <a onclick="go('shop')">Shop</a>
       <a onclick="go('about')">About</a>
@@ -728,43 +699,64 @@ body.no-scroll{overflow:hidden}
     </nav>
 
     <div class="dash-actions">
-      <button class="dash-btn" onclick="openReviews()" title="Ratings & Reviews" aria-label="Reviews">
+      <button class="dash-btn" onclick="openModal('modal-reviews')" title="Ratings & Reviews" aria-label="Reviews">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         <span class="label">Reviews</span>
       </button>
 
-      <button class="dash-btn" onclick="openModal('modal-shipping')" title="Shipping policy" aria-label="Shipping policy">
+      <button class="dash-btn" onclick="openModal('modal-shipping')" title="Shipping Policy" aria-label="Shipping">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
         <span class="label">Shipping</span>
       </button>
 
-      <button class="dash-btn" onclick="openModal('modal-refund')" title="Refund policy" aria-label="Refund policy">
+      <button class="dash-btn hide-mobile" onclick="openModal('modal-refund')" title="Refund Policy" aria-label="Refund Policy">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
-        <span class="label">Refund policy</span>
+        <span class="label">Refund Policy</span>
       </button>
 
-      <button class="dash-btn" onclick="openModal('modal-request-refund')" title="Request a refund" aria-label="Request a refund">
+      <button class="dash-btn hide-mobile" onclick="openModal('modal-request-refund')" title="Request a Refund" aria-label="Request Refund">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="9" y1="10" x2="15" y2="10"/></svg>
-        <span class="label">Request refund</span>
+        <span class="label">Request Refund</span>
       </button>
 
-      <select class="currency-select" id="currency-sel" onchange="setCurrency(this.value)" aria-label="Currency" style="display:none">
+      <select class="currency-select hide-mobile" id="currency-sel" onchange="setCurrency(this.value)" aria-label="Currency">
         <option value="GBP">£ GBP</option>
         <option value="USD">$ USD</option>
         <option value="EUR">€ EUR</option>
         <option value="NGN">₦ NGN</option>
       </select>
 
-      <button class="dash-btn primary" onclick="openCart()" aria-label="Cart">
+      <button class="dash-btn cart" onclick="openCart()" aria-label="Cart">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         <span class="label">Cart</span>
         <span class="cart-badge" id="cart-badge">0</span>
       </button>
 
-      <button class="dash-btn accent" id="account-btn" onclick="handleAccountClick()" aria-label="Account">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <span class="label" id="account-label">Login</span>
-      </button>
+      <div class="account-wrap">
+        <button class="dash-btn account" id="account-btn" onclick="toggleAccountMenu(event)" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="label" id="account-label">Login</span>
+        </button>
+        <div class="account-dd" id="account-dd">
+          <div class="account-dd-head" id="account-dd-head"></div>
+          <button class="account-dd-item" onclick="openModal('modal-shipping'); closeAccountMenu();">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Shipping policy
+          </button>
+          <button class="account-dd-item" onclick="openModal('modal-refund'); closeAccountMenu();">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            Refund policy
+          </button>
+          <button class="account-dd-item" onclick="openModal('modal-request-refund'); closeAccountMenu();">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Request a refund
+          </button>
+          <button class="account-dd-item danger" id="account-logout" onclick="logout(); closeAccountMenu();">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            Log out
+          </button>
+        </div>
+      </div>
 
       <button class="dash-btn menu-toggle" onclick="toggleMobileNav()" aria-label="Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -772,16 +764,31 @@ body.no-scroll{overflow:hidden}
     </div>
   </div>
 
-  <!-- Mobile drawer nav -->
   <div class="mobile-nav" id="mobile-nav">
-    <div class="mobile-nav-inner">
+    <div class="container">
       <a onclick="go('home')">Home</a>
       <a onclick="go('shop')">Shop</a>
       <a onclick="go('about')">About</a>
       <a onclick="go('faq')">Help / FAQ</a>
       <a onclick="go('contact')">Contact</a>
       <div class="row">
-        <select class="currency-select" onchange="setCurrency(this.value)" style="flex:1;height:42px;background:#fff">
+        <button class="dash-btn" onclick="openModal('modal-reviews'); toggleMobileNav();">
+          <span class="label">Reviews</span>
+        </button>
+        <button class="dash-btn" onclick="openModal('modal-shipping'); toggleMobileNav();">
+          <span class="label">Shipping</span>
+        </button>
+      </div>
+      <div class="row">
+        <button class="dash-btn" onclick="openModal('modal-refund'); toggleMobileNav();">
+          <span class="label">Refund Policy</span>
+        </button>
+        <button class="dash-btn" onclick="openModal('modal-request-refund'); toggleMobileNav();">
+          <span class="label">Request Refund</span>
+        </button>
+      </div>
+      <div class="row">
+        <select class="currency-select" onchange="setCurrency(this.value)" style="flex:1">
           <option value="GBP">£ GBP</option>
           <option value="USD">$ USD</option>
           <option value="EUR">€ EUR</option>
@@ -792,189 +799,138 @@ body.no-scroll{overflow:hidden}
   </div>
 </header>
 
-<!-- ============================================================
-     MAIN
-============================================================ -->
+<!-- MAIN -->
 <main>
 
-<!-- ============ HOME ============ -->
+<!-- HOME -->
 <section class="page active" data-page="home">
-
   <div class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="eyebrow" style="margin-bottom:18px">London-based · Delivering since 2020</div>
-        <h1 class="h-display">
-          Nigerian food, <em>delivered</em> properly.
-        </h1>
-        <p class="lead">
-          Garri, ponmo, crayfish, egusi, ofada rice, palm oil and more — sourced directly from farmers in Nigeria, packed in London, and shipped to your door. UK in 3 days, worldwide in 7–10.
-        </p>
+        <div class="hero-eyebrow">Trusted since 2020 · London, United Kingdom</div>
+        <h1 class="h-hero">The true taste of <em>Africa</em>, delivered to your door.</h1>
+        <p class="lead">Premium Nigerian foodstuffs sourced directly from trusted farmers — garri, ponmo, crayfish, egusi, ofada rice, palm oil and more. Delivered across the UK in 3 days, worldwide in 7–10.</p>
         <div class="hero-cta">
           <button class="btn btn-primary" onclick="go('shop')">
-            Shop all products
+            Shop the Pantry
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
-          <button class="btn btn-outline" onclick="openReviews()">Read reviews</button>
+          <button class="btn btn-outline" onclick="openReviews()">Read our reviews</button>
         </div>
 
-        <div class="hero-points">
-          <div>
-            <div class="hero-point-v">3 days</div>
-            <div class="hero-point-l">UK delivery</div>
-          </div>
-          <div>
-            <div class="hero-point-v">7–10 days</div>
-            <div class="hero-point-l">Worldwide</div>
-          </div>
-          <div>
-            <div class="hero-point-v">Direct</div>
-            <div class="hero-point-l">From farmers</div>
-          </div>
+        <div class="hero-strip">
+          <div class="hero-stat"><div class="hero-stat-v">3 Days</div><div class="hero-stat-l">UK delivery</div></div>
+          <div class="hero-stat"><div class="hero-stat-v">7–10 Days</div><div class="hero-stat-l">Worldwide</div></div>
+          <div class="hero-stat"><div class="hero-stat-v">100%</div><div class="hero-stat-l">Authentic</div></div>
         </div>
       </div>
 
       <div class="hero-visual">
-        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1200&q=80" alt="African pantry ingredients" />
+        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1200&q=80" alt="Nigerian foodstuffs" />
+        <div class="hero-float">
+          <div class="hero-float-tag">Now delivering</div>
+          <div class="hero-float-val">UK & Worldwide</div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Trust strip -->
-  <div class="trust-strip">
-    <div class="trust-inner">
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        UK delivery in 3 business days
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        Worldwide in 7–10 days
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        Free UK shipping over £40
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        Sourced direct from farmers
-      </div>
+  <div class="trust-bar">
+    <div class="trust-track">
+      <span class="trust-item">Delivered across the UK in 3 days</span>
+      <span class="trust-item">Worldwide in 7–10 days</span>
+      <span class="trust-item">Sourced directly from farmers</span>
+      <span class="trust-item">Free UK shipping over £40</span>
+      <span class="trust-item">Secure checkout</span>
+      <span class="trust-item">Delivered across the UK in 3 days</span>
+      <span class="trust-item">Worldwide in 7–10 days</span>
+      <span class="trust-item">Sourced directly from farmers</span>
+      <span class="trust-item">Free UK shipping over £40</span>
+      <span class="trust-item">Secure checkout</span>
     </div>
   </div>
 
-  <!-- Categories -->
   <div class="section">
     <div class="container">
-      <div style="margin-bottom:36px;max-width:640px">
-        <div class="eyebrow" style="margin-bottom:12px">Shop by category</div>
-        <h2 class="h-1">Everything your kitchen needs.</h2>
-      </div>
-      <div class="cat-grid" id="cat-grid"></div>
+      <div class="marker"><span class="marker-num">01</span><span class="marker-line"></span><span class="marker-label">Shop by Category</span></div>
+      <h2 class="h-1">Everything your kitchen needs.</h2>
+      <p class="lead" style="margin-top:14px">Six curated shelves, one pantry.</p>
+      <div class="cat-grid" id="cat-grid" style="margin-top:40px"></div>
     </div>
   </div>
 
-  <!-- Values -->
-  <div class="values">
-    <div class="container values-grid">
+  <div class="editorial">
+    <div class="container editorial-grid">
       <div>
-        <div class="eyebrow">Our promise</div>
-        <h2 class="h-1" style="margin-top:14px">Real food. Sourced honestly. Delivered fast.</h2>
-        <p style="margin-top:18px">
-          We work with a small network of trusted Nigerian farmers and suppliers. No middlemen, no repackaging, no preservatives — just food that tastes like home.
-        </p>
+        <div class="marker"><span class="marker-num">02</span><span class="marker-line"></span><span class="marker-label">Our Promise</span></div>
+        <h2 class="h-1">Real food, sourced honestly, delivered fast.</h2>
+        <p class="lead" style="margin-top:18px">We work with a small network of trusted Nigerian farmers and suppliers. No middlemen. No preservatives. Just food that tastes like home.</p>
       </div>
-
-      <div class="value-list">
-        <div class="value-item">
-          <div class="value-ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
-          </div>
-          <div>
-            <div class="value-ttl">Sourced from farmers</div>
-            <div class="value-dsc">Direct partnerships with growers in Nigeria. No importers, no re-bagging.</div>
-          </div>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+          <div><div class="feature-ttl">Sourced from Farmers</div><div class="feature-dsc">Direct partnerships with growers in Nigeria — no importers, no re-bagging.</div></div>
         </div>
-        <div class="value-item">
-          <div class="value-ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          </div>
-          <div>
-            <div class="value-ttl">3-day UK delivery</div>
-            <div class="value-dsc">Dispatched from our London warehouse, fully tracked.</div>
-          </div>
+        <div class="feature-item">
+          <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div><div class="feature-ttl">3-Day UK Delivery</div><div class="feature-dsc">Dispatched from our London warehouse. Tracked and packaged fresh.</div></div>
         </div>
-        <div class="value-item">
-          <div class="value-ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-          </div>
-          <div>
-            <div class="value-ttl">Freshness guarantee</div>
-            <div class="value-dsc">If it doesn't arrive fresh, we replace it. No questions asked.</div>
-          </div>
+        <div class="feature-item">
+          <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <div><div class="feature-ttl">Freshness Guarantee</div><div class="feature-dsc">If it doesn't arrive fresh, we replace it — no questions asked.</div></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Featured -->
   <div class="section">
     <div class="container">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:32px">
-        <div>
-          <div class="eyebrow" style="margin-bottom:12px">Featured</div>
-          <h2 class="h-1">Handpicked this week.</h2>
-        </div>
+      <div class="marker"><span class="marker-num">03</span><span class="marker-line"></span><span class="marker-label">Featured</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap">
+        <h2 class="h-1">Handpicked for you.</h2>
         <a class="btn btn-ghost" onclick="go('shop')">View all →</a>
       </div>
-      <div class="prod-grid" id="featured-grid"></div>
+      <div class="prod-grid" id="featured-grid" style="margin-top:40px"></div>
     </div>
   </div>
 
-  <!-- Best sellers -->
-  <div class="section" style="background:var(--cream-100);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="section" style="background:var(--cream-50);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
     <div class="container">
-      <div style="margin-bottom:32px;max-width:640px">
-        <div class="eyebrow" style="margin-bottom:12px">Best sellers</div>
-        <h2 class="h-1">What people keep coming back for.</h2>
-      </div>
-      <div class="prod-grid" id="bestseller-grid"></div>
+      <div class="marker"><span class="marker-num">04</span><span class="marker-line"></span><span class="marker-label">Best Sellers</span></div>
+      <h2 class="h-1">What our community keeps coming back for.</h2>
+      <div class="prod-grid" id="bestseller-grid" style="margin-top:40px"></div>
     </div>
   </div>
 
-  <!-- Reviews strip -->
   <div class="section">
     <div class="container">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:8px">
-        <div>
-          <div class="eyebrow" style="margin-bottom:12px">Customer reviews</div>
-          <h2 class="h-1">Real people, real feedback.</h2>
-        </div>
+      <div class="marker"><span class="marker-num">05</span><span class="marker-line"></span><span class="marker-label">From Our Customers</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap">
+        <h2 class="h-1">Real reviews. Real people.</h2>
         <button class="btn btn-ghost" onclick="openReviews()">All reviews →</button>
       </div>
-      <div class="review-grid" id="review-strip"></div>
+      <div class="review-strip" id="review-strip"></div>
     </div>
   </div>
 
-  <!-- CTA -->
-  <div class="section" style="background:var(--cream-100);border-top:1px solid var(--line);text-align:center">
+  <div class="section" style="background:var(--cream-50);border-top:1px solid var(--rule);text-align:center">
     <div class="container">
-      <h2 class="h-1" style="max-width:20ch;margin:0 auto">Bring the taste of home into your kitchen.</h2>
-      <p class="lead" style="margin:16px auto 0">Join thousands of families across the UK and beyond.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px">
-        <button class="btn btn-primary" onclick="go('shop')">Shop now</button>
+      <h2 class="h-1" style="max-width:18ch;margin:0 auto">Bring the true taste of Africa into your kitchen.</h2>
+      <p class="lead" style="margin:18px auto 0">Join thousands of families across the UK and beyond.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:32px">
+        <button class="btn btn-primary" onclick="go('shop')">Shop Now</button>
         <button class="btn btn-outline" onclick="openModal('modal-shipping')">Shipping info</button>
       </div>
     </div>
   </div>
-
 </section>
 
-<!-- ============ SHOP ============ -->
+<!-- SHOP -->
 <section class="page" data-page="shop">
   <div class="container">
     <div class="page-head">
-      <div class="eyebrow" style="margin-bottom:10px">Shop</div>
-      <h1 class="h-1">The full pantry</h1>
+      <div class="marker" style="justify-content:center"><span class="marker-num">—</span><span class="marker-line"></span><span class="marker-label">Shop</span><span class="marker-line"></span><span class="marker-num">—</span></div>
+      <h1 class="h-1">The Full Pantry</h1>
       <p class="lead">Every product, every size. Delivered fresh.</p>
     </div>
     <div class="filters" id="filters"></div>
@@ -982,25 +938,34 @@ body.no-scroll{overflow:hidden}
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
+<!-- ABOUT -->
 <section class="page" data-page="about">
   <div class="container">
     <div class="page-head">
-      <div class="eyebrow" style="margin-bottom:10px">About</div>
+      <div class="marker" style="justify-content:center"><span class="marker-num">—</span><span class="marker-line"></span><span class="marker-label">About</span><span class="marker-line"></span><span class="marker-num">—</span></div>
       <h1 class="h-1">Yethy African Pantry</h1>
       <p class="lead">Bringing the true taste of Africa to your home.</p>
     </div>
 
-    <div style="max-width:680px;margin:40px auto 0">
-      <p class="lead" style="margin-bottom:18px">
-        Yethy African Pantry began in a small kitchen in East London, out of a simple frustration: finding authentic Nigerian foodstuffs — the kind that tastes like your mother's cooking — was nearly impossible without a trip to a crowded market or a relative's suitcase.
-      </p>
-      <p class="lead" style="margin-bottom:18px">
-        So we built the pantry we wished existed. Every product is sourced directly from trusted farmers and producers across Nigeria, carefully packaged, and shipped to your door within days — not weeks.
-      </p>
-      <p class="lead">
-        Whether you're cooking for your family, running a restaurant, or stocking up for the winter, we're here so you never have to compromise on taste.
-      </p>
+    <div style="max-width:720px;margin:40px auto 0">
+      <p class="lead" style="margin-bottom:18px">Yethy African Pantry began in a small kitchen in East London, with a simple frustration: finding authentic Nigerian foodstuffs — the kind that tastes like your mother's cooking — was nearly impossible without a trip to a crowded market or a relative's suitcase.</p>
+      <p class="lead" style="margin-bottom:18px">So we built the pantry we wished existed. Every product is sourced directly from trusted farmers and producers across Nigeria, carefully packaged, and shipped to your door within days — not weeks.</p>
+      <p class="lead">Whether you're cooking for your family, running a restaurant, or stocking up for the winter — we're here so you never have to compromise on taste.</p>
+    </div>
+
+    <div style="margin-top:64px;display:grid;gap:16px" id="about-grid">
+      <div class="review-card">
+        <div class="feature-ttl">Authentic Quality</div>
+        <div class="feature-dsc" style="margin-top:6px">Every product is sourced and inspected with care.</div>
+      </div>
+      <div class="review-card">
+        <div class="feature-ttl">3-Day UK Delivery</div>
+        <div class="feature-dsc" style="margin-top:6px">Dispatched from London, tracked to your door.</div>
+      </div>
+      <div class="review-card">
+        <div class="feature-ttl">Family-Owned</div>
+        <div class="feature-dsc" style="margin-top:6px">Independently run. Personally accountable.</div>
+      </div>
     </div>
 
     <div style="text-align:center;margin-top:44px">
@@ -1009,55 +974,50 @@ body.no-scroll{overflow:hidden}
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
+<!-- FAQ -->
 <section class="page" data-page="faq">
   <div class="container">
     <div class="page-head">
-      <div class="eyebrow" style="margin-bottom:10px">Help</div>
-      <h1 class="h-1">Frequently asked</h1>
+      <div class="marker" style="justify-content:center"><span class="marker-num">—</span><span class="marker-line"></span><span class="marker-label">Help</span><span class="marker-line"></span><span class="marker-num">—</span></div>
+      <h1 class="h-1">Frequently Asked</h1>
       <p class="lead">Answers to the questions we hear most.</p>
     </div>
-
     <div class="faq-list" id="faq-list"></div>
-
     <div style="text-align:center;margin-top:40px">
-      <p style="color:var(--ink-soft);margin-bottom:14px;font-size:.9rem">Still need help?</p>
+      <p style="color:var(--ink-soft);margin-bottom:14px">Still need help?</p>
       <button class="btn btn-accent" onclick="openWhatsApp()">Chat with us</button>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
+<!-- CONTACT -->
 <section class="page" data-page="contact">
   <div class="container">
     <div class="page-head">
-      <div class="eyebrow" style="margin-bottom:10px">Contact</div>
-      <h1 class="h-1">Say hello</h1>
+      <div class="marker" style="justify-content:center"><span class="marker-num">—</span><span class="marker-line"></span><span class="marker-label">Contact</span><span class="marker-line"></span><span class="marker-num">—</span></div>
+      <h1 class="h-1">Say Hello</h1>
       <p class="lead">We'd love to hear from you. Reach us on any channel.</p>
     </div>
 
     <div class="contact-grid">
-      <div class="contact-card accent" onclick="openWhatsApp()">
+      <a class="contact-card accent" onclick="openWhatsApp()" style="cursor:pointer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <h3>WhatsApp</h3>
         <p>Fastest way to reach us</p>
         <strong>Chat now →</strong>
-      </div>
-
+      </a>
       <a class="contact-card" href="mailto:hello@yethyafricanpantry.com">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
         <h3>Email</h3>
         <p>We reply within 24 hours</p>
         <strong>hello@yethyafricanpantry.com</strong>
       </a>
-
       <div class="contact-card">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <h3>Warehouse</h3>
+        <h3>Location</h3>
         <p>London, United Kingdom</p>
-        <strong>Shipping worldwide</strong>
+        <strong>Worldwide shipping</strong>
       </div>
-
       <div class="contact-card">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <h3>Hours</h3>
@@ -1067,25 +1027,23 @@ body.no-scroll{overflow:hidden}
   </div>
 </section>
 
-<!-- ============ CHECKOUT ============ -->
+<!-- CHECKOUT -->
 <section class="page" data-page="checkout">
   <div class="container">
     <div class="page-head">
-      <div class="eyebrow" style="margin-bottom:10px">Checkout</div>
-      <h1 class="h-1">Almost there</h1>
+      <div class="marker" style="justify-content:center"><span class="marker-num">—</span><span class="marker-line"></span><span class="marker-label">Checkout</span><span class="marker-line"></span><span class="marker-num">—</span></div>
+      <h1 class="h-1">Almost there.</h1>
       <p class="lead">Confirm your details — we'll finalise delivery on WhatsApp.</p>
     </div>
 
     <div class="checkout-wrap">
       <form id="checkout-form" class="form-card">
-        <h3 class="h-3" style="margin-bottom:20px">Delivery details</h3>
-
+        <h3 class="h-3" style="margin-bottom:22px">Delivery Details</h3>
         <div class="form-grid">
           <div class="field">
-            <label for="cust-name">Full name</label>
+            <label for="cust-name">Full Name</label>
             <input id="cust-name" required placeholder="Your full name" />
           </div>
-
           <div class="form-2">
             <div class="field">
               <label for="cust-email">Email</label>
@@ -1096,37 +1054,33 @@ body.no-scroll{overflow:hidden}
               <input id="cust-phone" required placeholder="+44..." />
             </div>
           </div>
-
           <div class="field">
             <label for="cust-country">Country</label>
             <input id="cust-country" required placeholder="United Kingdom" value="United Kingdom" />
           </div>
-
           <div class="field">
-            <label for="cust-address">Delivery address</label>
+            <label for="cust-address">Delivery Address</label>
             <input id="cust-address" required placeholder="Street address" />
           </div>
-
           <div class="field">
-            <label for="cust-notes">Order notes (optional)</label>
-            <textarea id="cust-notes" rows="3" placeholder="Anything we should know?"></textarea>
+            <label for="cust-notes">Order Notes (optional)</label>
+            <textarea id="cust-notes" rows="3" placeholder="Anything we should know?" style="resize:vertical"></textarea>
           </div>
-
           <button type="submit" class="btn btn-accent btn-full">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            Place order on WhatsApp
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Place Order on WhatsApp
           </button>
-          <p style="text-align:center;font-size:.75rem;color:var(--ink-mute)">We'll confirm delivery fee and payment via WhatsApp.</p>
+          <p style="text-align:center;font-size:.72rem;color:var(--ink-faint)">We'll confirm delivery fee and payment via WhatsApp.</p>
         </div>
       </form>
 
       <div>
         <div class="sum-card">
-          <h3 class="h-3" style="margin-bottom:14px">Order summary</h3>
+          <h3 class="h-3" style="margin-bottom:14px">Order Summary</h3>
           <div id="checkout-items"></div>
-          <div style="border-top:1px solid var(--line);margin-top:10px;padding-top:10px">
-            <div class="sum-row"><span>Subtotal</span><strong id="checkout-subtotal">—</strong></div>
-            <div class="sum-row"><span>Delivery</span><strong style="font-weight:500;color:var(--ink-soft)">Confirmed on WhatsApp</strong></div>
+          <div style="border-top:1px solid var(--rule);margin-top:10px;padding-top:10px">
+            <div class="sum-row"><span style="color:var(--ink-soft)">Subtotal</span><span style="font-weight:600" id="checkout-subtotal">—</span></div>
+            <div class="sum-row"><span style="color:var(--ink-soft)">Delivery</span><span style="font-weight:600">To be confirmed</span></div>
             <div class="sum-row total"><span>Total</span><span id="checkout-total">—</span></div>
           </div>
         </div>
@@ -1137,65 +1091,59 @@ body.no-scroll{overflow:hidden}
 
 </main>
 
-<!-- ============================================================
-     FOOTER
-============================================================ -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container foot-grid">
     <div>
-      <div class="foot-brand">YETHY</div>
-      <div class="foot-brand-sub">AFRICAN PANTRY</div>
+      <div class="foot-logo-main">YETHY</div>
+      <div class="foot-logo-sub">AFRICAN PANTRY</div>
       <p class="foot-desc">Bringing the true taste of Africa to your home. Authentic Nigerian foodstuffs, delivered across the UK and worldwide.</p>
-      <a class="foot-social" href="https://instagram.com/yethyafricanpantry" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        @yethyafricanpantry
-      </a>
+      <div class="foot-socials">
+        <a class="foot-social" href="https://instagram.com/yethyafricanpantry" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
     </div>
-
     <div>
       <h4>Shop</h4>
       <ul>
-        <li><a onclick="go('home')">Home</a></li>
-        <li><a onclick="go('shop')">All products</a></li>
-        <li><a onclick="go('about')">About us</a></li>
-        <li><a onclick="go('faq')">FAQ</a></li>
-        <li><a onclick="go('contact')">Contact</a></li>
+        <li><span onclick="go('home')">Home</span></li>
+        <li><span onclick="go('shop')">All Products</span></li>
+        <li><span onclick="go('about')">About Us</span></li>
+        <li><span onclick="go('faq')">FAQ</span></li>
+        <li><span onclick="go('contact')">Contact</span></li>
       </ul>
     </div>
-
     <div>
       <h4>Policies</h4>
       <ul>
-        <li><a onclick="openModal('modal-shipping')">Shipping policy</a></li>
-        <li><a onclick="openModal('modal-refund')">Refund policy</a></li>
-        <li><a onclick="openModal('modal-request-refund')">Request a refund</a></li>
-        <li><a onclick="openReviews()">Ratings & reviews</a></li>
+        <li><span onclick="openModal('modal-shipping')">Shipping Policy</span></li>
+        <li><span onclick="openModal('modal-refund')">Refund Policy</span></li>
+        <li><span onclick="openModal('modal-request-refund')">Request a Refund</span></li>
+        <li><span onclick="openModal('modal-reviews')">Ratings & Reviews</span></li>
       </ul>
     </div>
   </div>
-
   <div class="container foot-bottom">
     <p>© <span id="year"></span> Yethy African Pantry. All rights reserved.</p>
     <p>London, United Kingdom</p>
   </div>
 </footer>
 
-<!-- ============================================================
-     MODAL — REVIEWS
-============================================================ -->
+<!-- REVIEWS MODAL -->
 <div class="modal-bg" id="modal-reviews" onclick="closeModalOnBg(event,'modal-reviews')">
   <div class="modal wide">
     <button class="modal-close" onclick="closeModal('modal-reviews')" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
     <div class="modal-head">
-      <div class="eyebrow">★ Reviews</div>
-      <h2>Ratings & reviews</h2>
+      <div class="marker"><span class="marker-num">★</span><span class="marker-line"></span><span class="marker-label">Reviews</span></div>
+      <h2>Ratings & Reviews</h2>
       <p>What our customers say after their orders arrive.</p>
     </div>
     <div class="modal-body">
       <div class="reviews-summary">
-        <div class="reviews-score" id="avg-score">4.9</div>
+        <div><div class="reviews-score" id="avg-score">4.9</div></div>
         <div class="reviews-meta">
           <div class="stars" id="avg-stars"></div>
           <p><strong id="review-count">0</strong> verified reviews · 97% would order again</p>
@@ -1206,118 +1154,104 @@ body.no-scroll{overflow:hidden}
   </div>
 </div>
 
-<!-- ============================================================
-     MODAL — SHIPPING POLICY
-============================================================ -->
+<!-- SHIPPING MODAL -->
 <div class="modal-bg" id="modal-shipping" onclick="closeModalOnBg(event,'modal-shipping')">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('modal-shipping')" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
     <div class="modal-head">
-      <div class="eyebrow">Policy</div>
-      <h2>Shipping policy</h2>
-      <p>How we pack, dispatch and deliver your order — from our London warehouse to your door.</p>
+      <div class="marker"><span class="marker-num">—</span><span class="marker-line"></span><span class="marker-label">Policy</span></div>
+      <h2>Shipping Policy</h2>
+      <p>Everything you need to know about how we deliver your order.</p>
     </div>
     <div class="modal-body policy">
-
-      <h3>Dispatch & delivery times</h3>
-      <p>All orders are packed and dispatched from our warehouse in <strong>London, United Kingdom</strong>. Once dispatched, delivery estimates are:</p>
+      <h3>Dispatch & Delivery Times</h3>
+      <p>All orders are packed and dispatched from our warehouse in <strong>London, United Kingdom</strong>. Once dispatched, delivery times vary by destination:</p>
       <ul>
-        <li><strong>United Kingdom:</strong> delivered within <strong>3 business days</strong> — fully tracked.</li>
-        <li><strong>Europe, North America, and the rest of the world:</strong> delivered within <strong>7–10 business days</strong> — fully tracked where the courier allows.</li>
+        <li><strong>United Kingdom:</strong> 3 business days (fully tracked)</li>
+        <li><strong>Europe &amp; North America:</strong> 7–10 business days</li>
+        <li><strong>Rest of World:</strong> 7–10 business days</li>
       </ul>
-      <p>Orders placed before <strong>2:00 PM GMT</strong> on a weekday are typically dispatched the same day. Orders placed on weekends or UK public holidays are dispatched on the next business day.</p>
+      <p>Orders placed before <strong>2:00 PM GMT</strong> on a weekday are typically dispatched the same day. Orders placed on weekends or public holidays are dispatched the next business day.</p>
 
-      <h3>Shipping costs</h3>
+      <h3>Shipping Costs</h3>
       <ul>
-        <li><strong>UK Standard (3 days):</strong> £4.95 — free on orders over £40.</li>
-        <li><strong>UK Express (1–2 days):</strong> £8.95 — available at checkout on request.</li>
-        <li><strong>Europe:</strong> from £9.95, calculated by weight and destination.</li>
-        <li><strong>Rest of world:</strong> from £12.95, calculated by weight and destination.</li>
-        <li><strong>Wholesale & bulk:</strong> custom quote on WhatsApp — we ship pallets internationally.</li>
+        <li><strong>UK Standard:</strong> £4.95 — free on orders over £40</li>
+        <li><strong>UK Express:</strong> £8.95 (1–2 business days)</li>
+        <li><strong>International:</strong> Calculated at checkout based on destination and weight</li>
+        <li><strong>Wholesale / bulk:</strong> Custom quote provided via WhatsApp</li>
       </ul>
-      <p>Final shipping cost is confirmed on WhatsApp at checkout, based on your delivery address and basket weight.</p>
 
       <h3>Tracking</h3>
-      <p>You'll receive a tracking number by email and, if you opted in, WhatsApp — as soon as your parcel leaves our warehouse. Tracking updates can take up to 24 hours to appear in the courier's system.</p>
+      <p>You will receive a tracking number via email (and WhatsApp, if opted in) as soon as your parcel leaves our warehouse. Tracking updates may take up to 24 hours to appear in the courier's system.</p>
 
-      <h3>Customs & import duties</h3>
-      <p>For international orders, any import duties, taxes, or customs clearance fees levied by the destination country are the responsibility of the customer. Yethy African Pantry is not liable for delays caused by customs processing or border controls.</p>
+      <h3>Customs &amp; Import Duties</h3>
+      <p>For international orders, any import duties, taxes, or customs fees levied by the destination country are the responsibility of the customer. Yethy African Pantry is not liable for delays caused by customs processing.</p>
 
-      <h3>Failed deliveries</h3>
-      <p>If a courier cannot deliver your parcel because of an incorrect address, an unanswered door, or a refusal to pay duties, the parcel may be returned to us. Redelivery or reshipment in these cases is at the customer's expense.</p>
+      <h3>Delivery Issues</h3>
+      <p>If your parcel is delayed beyond the estimated timeframe, or arrives damaged, please contact us within 7 days of the expected delivery date. We'll investigate with the courier and arrange a replacement or refund as appropriate.</p>
 
-      <h3>Damaged or lost parcels</h3>
-      <p>If your parcel arrives damaged or does not arrive within the estimated timeframe, contact us within <strong>7 days</strong> of the expected delivery date. We'll investigate with the courier and arrange a replacement or refund where appropriate. See our Refund policy for full details.</p>
-
-      <div class="note">
-        <strong>Please note:</strong> Delivery timeframes are estimates provided by our courier partners and are not guaranteed. Delays can occur during peak periods such as Christmas, Ramadan, and summer holidays.
-      </div>
+      <div class="note"><strong>Note:</strong> Delivery timeframes are estimates provided by our courier partners and are not guaranteed. Delays can occur during peak periods (e.g., Christmas, Ramadan, summer holidays).</div>
 
       <h3>Contact</h3>
-      <p>For any shipping questions, message us on WhatsApp or email <strong>hello@yethyafricanpantry.com</strong>. We aim to respond within 24 hours.</p>
+      <p>For any shipping-related questions, message us on WhatsApp or email <strong>hello@yethyafricanpantry.com</strong>. We aim to respond within 24 hours.</p>
     </div>
   </div>
 </div>
 
-<!-- ============================================================
-     MODAL — REFUND POLICY
-============================================================ -->
+<!-- REFUND POLICY MODAL -->
 <div class="modal-bg" id="modal-refund" onclick="closeModalOnBg(event,'modal-refund')">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('modal-refund')" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
     <div class="modal-head">
-      <div class="eyebrow">Policy</div>
-      <h2>Refund policy</h2>
+      <div class="marker"><span class="marker-num">—</span><span class="marker-line"></span><span class="marker-label">Policy</span></div>
+      <h2>Refund Policy</h2>
       <p>Our promise if something isn't right with your order.</p>
     </div>
     <div class="modal-body policy">
-
-      <h3>Our promise</h3>
+      <h3>Our Promise</h3>
       <p>We want every order to arrive fresh, complete, and exactly as described. If for any reason it doesn't, we'll make it right — quickly and fairly.</p>
 
-      <h3>Returns & refunds — 14 days</h3>
+      <h3>Returns &amp; Refunds — 14 Days</h3>
       <p>You may request a return or refund within <strong>14 days of delivery</strong> if:</p>
       <ul>
-        <li>Your order arrived damaged, spoiled, or leaking.</li>
-        <li>You received the wrong item(s).</li>
-        <li>Items are missing from your order.</li>
-        <li>The product is significantly different from what was described.</li>
+        <li>Your order arrived damaged, spoiled, or leaking</li>
+        <li>You received the wrong item(s)</li>
+        <li>Items are missing from your order</li>
+        <li>The product is significantly different from what was described</li>
       </ul>
 
-      <h3>Items not eligible for refund</h3>
+      <h3>Items Not Eligible for Refund</h3>
       <ul>
-        <li>Perishable or opened food items — for hygiene and safety reasons.</li>
-        <li>Custom or wholesale orders — subject to separate terms.</li>
-        <li>Products damaged due to misuse or improper storage after delivery.</li>
-        <li>Requests made after the 14-day window.</li>
+        <li>Perishable or opened food items — for hygiene and safety reasons</li>
+        <li>Custom or wholesale orders — subject to separate terms</li>
+        <li>Products damaged due to misuse or improper storage after delivery</li>
+        <li>Requests made after the 14-day window</li>
       </ul>
 
-      <h3>How to request a refund</h3>
-      <p>Use the <strong>Request refund</strong> button in the top dashboard, or email us with:</p>
+      <h3>How to Request a Refund</h3>
+      <p>Use the <strong>Request a Refund</strong> button in the top dashboard, or email us with:</p>
       <ul>
-        <li>Your order reference (from your WhatsApp confirmation).</li>
-        <li>Photographs of the issue (damaged / incorrect item).</li>
-        <li>A short description of what went wrong.</li>
+        <li>Your order reference (from your WhatsApp confirmation)</li>
+        <li>Photographs of the issue (damaged / incorrect item)</li>
+        <li>A short description of what went wrong</li>
       </ul>
       <p>We aim to review every request within <strong>2 business days</strong>.</p>
 
-      <h3>Refund method & timing</h3>
+      <h3>Refund Method &amp; Timing</h3>
       <ul>
-        <li>Approved refunds are processed to your original payment method.</li>
-        <li>Please allow <strong>5–10 business days</strong> for the refund to appear.</li>
-        <li>In some cases we may offer a replacement or store credit instead — you choose.</li>
+        <li>Approved refunds are processed to your original payment method</li>
+        <li>Please allow <strong>5–10 business days</strong> for the refund to appear</li>
+        <li>In some cases we may offer a replacement or store credit instead — you choose</li>
       </ul>
 
-      <h3>Return shipping</h3>
+      <h3>Return Shipping</h3>
       <p>If the error was on our side (wrong item, damaged goods), we cover the return shipping cost. If you simply changed your mind, return shipping is the customer's responsibility, and items must be unopened and in original packaging.</p>
 
-      <div class="note">
-        <strong>Perishables:</strong> Because our products are food items, we may ask for photographs of spoiled or damaged goods rather than requesting a physical return. This helps us resolve your refund faster.
-      </div>
+      <div class="note"><strong>Perishables:</strong> Because our products are food items, we may ask for photographs of spoiled or damaged goods rather than requesting a physical return. This helps us resolve your refund faster.</div>
 
       <h3>Contact</h3>
       <p>Questions? WhatsApp us anytime or email <strong>hello@yethyafricanpantry.com</strong>.</p>
@@ -1325,35 +1259,24 @@ body.no-scroll{overflow:hidden}
   </div>
 </div>
 
-<!-- ============================================================
-     MODAL — REQUEST REFUND
-============================================================ -->
+<!-- REQUEST REFUND MODAL -->
 <div class="modal-bg" id="modal-request-refund" onclick="closeModalOnBg(event,'modal-request-refund')">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('modal-request-refund')" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
     <div class="modal-head">
-      <div class="eyebrow">Request</div>
-      <h2>Request a refund</h2>
+      <div class="marker"><span class="marker-num">—</span><span class="marker-line"></span><span class="marker-label">Request</span></div>
+      <h2>Request a Refund</h2>
       <p>Tell us what went wrong and we'll sort it out within 2 business days.</p>
     </div>
     <div class="modal-body">
       <form id="refund-form" class="form-grid">
         <div class="form-2">
-          <div class="field">
-            <label for="rf-name">Full name</label>
-            <input id="rf-name" required placeholder="Your full name" />
-          </div>
-          <div class="field">
-            <label for="rf-email">Email</label>
-            <input id="rf-email" type="email" required placeholder="you@email.com" />
-          </div>
+          <div class="field"><label for="rf-name">Full Name</label><input id="rf-name" required placeholder="Your full name" /></div>
+          <div class="field"><label for="rf-email">Email</label><input id="rf-email" type="email" required placeholder="you@email.com" /></div>
         </div>
-        <div class="field">
-          <label for="rf-order">Order reference</label>
-          <input id="rf-order" required placeholder="e.g. YAP-2024-1042" />
-        </div>
+        <div class="field"><label for="rf-order">Order Reference</label><input id="rf-order" required placeholder="e.g. YAP-2024-1042" /></div>
         <div class="field">
           <label for="rf-reason">Reason</label>
           <select id="rf-reason" required>
@@ -1368,10 +1291,10 @@ body.no-scroll{overflow:hidden}
         </div>
         <div class="field">
           <label for="rf-details">Details</label>
-          <textarea id="rf-details" rows="4" required placeholder="Please describe the issue and what outcome you'd like."></textarea>
+          <textarea id="rf-details" rows="4" required placeholder="Please describe the issue and what outcome you'd like." style="resize:vertical"></textarea>
         </div>
         <div class="field">
-          <label for="rf-resolution">Preferred resolution</label>
+          <label for="rf-resolution">Preferred Resolution</label>
           <select id="rf-resolution">
             <option>Refund to original payment method</option>
             <option>Replacement of affected item(s)</option>
@@ -1379,127 +1302,89 @@ body.no-scroll{overflow:hidden}
             <option>Not sure — please advise</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-accent btn-full">Submit refund request</button>
-        <p style="text-align:center;font-size:.75rem;color:var(--ink-mute)">
-          Your request will be sent to our team via WhatsApp. You'll receive a confirmation within 2 business days.
-        </p>
+        <button type="submit" class="btn btn-accent btn-full">Submit Refund Request</button>
+        <p style="text-align:center;font-size:.72rem;color:var(--ink-faint)">Your request will be sent to our team via WhatsApp. You'll receive a confirmation within 2 business days.</p>
       </form>
     </div>
   </div>
 </div>
 
-<!-- ============================================================
-     MODAL — AUTH
-============================================================ -->
+<!-- AUTH MODAL -->
 <div class="modal-bg" id="modal-auth" onclick="closeModalOnBg(event,'modal-auth')">
   <div class="modal narrow">
     <button class="modal-close" onclick="closeModal('modal-auth')" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
-    <div class="auth-wrap">
+    <div class="modal-body">
       <div class="auth-logo">
-        <div class="auth-logo-mark">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V8"/><path d="M12 8c-3 0-6-2-6-6 4 0 6 2 6 6Z"/><path d="M12 8c3 0 6-2 6-6-4 0-6 2-6 6Z"/><path d="M12 14c-3 0-6-2-6-6 4 0 6 2 6 6Z" opacity=".55"/><path d="M12 14c3 0 6-2 6-6-4 0-6 2-6 6Z" opacity=".55"/></svg>
-        </div>
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 20 C26 12 20 8 16 10 C16 18 22 22 32 22 Z" fill="#123322"/>
+          <path d="M32 20 C38 12 44 8 48 10 C48 18 42 22 32 22 Z" fill="#123322"/>
+          <path d="M32 22 C28 14 32 6 32 4 C36 6 40 14 32 22 Z" fill="#0B2415"/>
+        </svg>
         <div class="auth-logo-text">YETHY</div>
         <div class="auth-logo-sub">AFRICAN PANTRY</div>
       </div>
 
       <div class="auth-tabs" id="auth-tabs">
-        <button type="button" class="auth-tab active" data-tab="login" onclick="switchAuthTab('login')">Login</button>
-        <button type="button" class="auth-tab" data-tab="signup" onclick="switchAuthTab('signup')">Sign up</button>
+        <button class="auth-tab active" data-tab="login" onclick="switchAuthTab('login')">Login</button>
+        <button class="auth-tab" data-tab="signup" onclick="switchAuthTab('signup')">Sign Up</button>
       </div>
 
       <div id="auth-msg-slot"></div>
 
-      <!-- LOGIN -->
       <form class="auth-form" id="form-login">
-        <div class="field">
-          <label for="lg-email">Email</label>
-          <input id="lg-email" type="email" required placeholder="you@email.com" autocomplete="email" />
-        </div>
-        <div class="field">
-          <label for="lg-pass">Password</label>
-          <input id="lg-pass" type="password" required placeholder="Your password" autocomplete="current-password" />
-        </div>
-        <div class="auth-aux">
-          <button type="button" class="auth-link" onclick="showRecover()">Forgot password?</button>
-        </div>
+        <div class="field"><label for="lg-email">Email</label><input id="lg-email" type="email" required placeholder="you@email.com" autocomplete="email" /></div>
+        <div class="field"><label for="lg-pass">Password</label><input id="lg-pass" type="password" required placeholder="Your password" autocomplete="current-password" /></div>
+        <div class="auth-aux"><span></span><button type="button" class="auth-link" onclick="showRecover()">Forgot password?</button></div>
         <button type="submit" class="btn btn-primary btn-full">Login</button>
       </form>
 
-      <!-- SIGNUP -->
       <form class="auth-form" id="form-signup" style="display:none">
-        <div class="field">
-          <label for="su-name">Full name</label>
-          <input id="su-name" required placeholder="Your full name" autocomplete="name" />
-        </div>
-        <div class="field">
-          <label for="su-email">Email</label>
-          <input id="su-email" type="email" required placeholder="you@email.com" autocomplete="email" />
-        </div>
-        <div class="field">
-          <label for="su-pass">Password</label>
-          <input id="su-pass" type="password" required minlength="6" placeholder="At least 6 characters" autocomplete="new-password" />
-        </div>
-        <button type="submit" class="btn btn-accent btn-full">Create account</button>
+        <div class="field"><label for="su-name">Full Name</label><input id="su-name" required placeholder="Your full name" autocomplete="name" /></div>
+        <div class="field"><label for="su-email">Email</label><input id="su-email" type="email" required placeholder="you@email.com" autocomplete="email" /></div>
+        <div class="field"><label for="su-pass">Password</label><input id="su-pass" type="password" required minlength="6" placeholder="At least 6 characters" autocomplete="new-password" /></div>
+        <button type="submit" class="btn btn-accent btn-full">Create Account</button>
       </form>
 
-      <!-- RECOVER -->
       <form class="auth-form" id="form-recover" style="display:none">
-        <p class="small" style="margin-bottom:-4px">
-          Enter the email you used to sign up. If it exists, you'll be able to set a new password.
-        </p>
-        <div class="field">
-          <label for="rc-email">Email</label>
-          <input id="rc-email" type="email" required placeholder="you@email.com" autocomplete="email" />
-        </div>
-        <div class="field" id="rc-newpass-field" style="display:none">
-          <label for="rc-newpass">New password</label>
-          <input id="rc-newpass" type="password" minlength="6" placeholder="New password (min 6 chars)" autocomplete="new-password" />
-        </div>
+        <p style="color:var(--ink-soft);font-size:.86rem;line-height:1.6">Enter the email you used to sign up. If it exists, you'll be able to set a new password.</p>
+        <div class="field"><label for="rc-email">Email</label><input id="rc-email" type="email" required placeholder="you@email.com" autocomplete="email" /></div>
+        <div class="field" id="rc-newpass-field" style="display:none"><label for="rc-newpass">New Password</label><input id="rc-newpass" type="password" minlength="6" placeholder="New password (min 6 chars)" autocomplete="new-password" /></div>
         <button type="submit" class="btn btn-primary btn-full" id="rc-submit">Continue</button>
         <button type="button" class="btn btn-ghost btn-full" onclick="switchAuthTab('login')">Back to login</button>
       </form>
 
-      <p class="auth-foot">
-        By continuing you agree to our
-        <a class="auth-link" onclick="closeModal('modal-auth'); openModal('modal-shipping')">shipping</a> and
-        <a class="auth-link" onclick="closeModal('modal-auth'); openModal('modal-refund')">refund</a> policies.
-      </p>
+      <p class="auth-foot">By continuing you agree to our <button class="auth-link" onclick="closeModal('modal-auth'); openModal('modal-shipping')">shipping</button> and <button class="auth-link" onclick="closeModal('modal-auth'); openModal('modal-refund')">refund</button> policies.</p>
     </div>
   </div>
 </div>
 
-<!-- ============================================================
-     CART DRAWER
-============================================================ -->
+<!-- CART DRAWER -->
 <div class="drawer-bg" id="cart-bg" onclick="closeCart()"></div>
 <aside class="drawer" id="cart-drawer" aria-label="Shopping cart">
   <div class="drawer-head">
-    <h3 class="drawer-title">Your cart</h3>
+    <h3 class="drawer-title">Your Cart</h3>
     <button class="drawer-x" onclick="closeCart()" aria-label="Close cart">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
   <div class="drawer-body" id="cart-items"></div>
   <div class="drawer-foot" id="cart-foot" style="display:none">
-    <div class="sum-row"><span>Subtotal</span><strong id="cart-sub">—</strong></div>
-    <div class="sum-row"><span>Delivery</span><strong style="font-weight:500;color:var(--ink-soft)">At checkout</strong></div>
+    <div class="sum-row"><span style="color:var(--ink-soft)">Subtotal</span><span style="font-weight:600" id="cart-sub">—</span></div>
+    <div class="sum-row"><span style="color:var(--ink-soft)">Delivery</span><span style="font-weight:600">Calculated at checkout</span></div>
     <div class="sum-row total"><span>Total</span><span id="cart-total">—</span></div>
     <button class="btn btn-primary btn-full" style="margin-top:14px" onclick="proceedToCheckout()">
-      Proceed to checkout
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      Proceed to Checkout
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </button>
     <button class="btn btn-ghost btn-full" style="margin-top:6px" onclick="closeCart()">Continue shopping</button>
   </div>
 </aside>
 
-<!-- ============================================================
-     PRODUCT MODAL
-============================================================ -->
+<!-- PRODUCT MODAL -->
 <div class="modal-bg" id="modal-product" onclick="closeModalOnBg(event,'modal-product')">
-  <div class="modal wide" style="padding:0;overflow:hidden">
+  <div class="modal wide" style="padding:0">
     <button class="modal-close" onclick="closeModal('modal-product')" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
@@ -1507,9 +1392,6 @@ body.no-scroll{overflow:hidden}
   </div>
 </div>
 
-<!-- ============================================================
-     WHATSAPP FLOAT + TOAST
-============================================================ -->
 <a class="wa-float" id="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" onclick="openWhatsApp(event)">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
@@ -1521,17 +1403,17 @@ body.no-scroll{overflow:hidden}
 
 <script>
 /* ============================================================
-   BUSINESS CONFIG — EDIT THIS
+   BUSINESS CONFIG
 ============================================================ */
 const BUSINESS = {
   name: 'Yethy African Pantry',
-  whatsapp: '2348012345678', // ← your number, digits only, no +
+  whatsapp: '2348012345678',
   email: 'hello@yethyafricanpantry.com',
   warehouse: 'London, United Kingdom',
 };
 
 /* ============================================================
-   CURRENCIES (base prices in GBP)
+   CURRENCIES (base: GBP)
 ============================================================ */
 const CURRENCIES = {
   GBP: { symbol: '£', rate: 1,     name: 'British Pound' },
@@ -1539,7 +1421,6 @@ const CURRENCIES = {
   EUR: { symbol: '€', rate: 1.17,  name: 'Euro' },
   NGN: { symbol: '₦', rate: 2000,  name: 'Nigerian Naira' },
 };
-
 let CURRENT_CURRENCY = localStorage.getItem('yethy-currency') || 'GBP';
 
 function formatPrice(gbp){
@@ -1550,7 +1431,7 @@ function formatPrice(gbp){
   else rounded = Math.round(amount * 100) / 100;
   return c.symbol + rounded.toLocaleString('en-GB', {
     minimumFractionDigits: CURRENT_CURRENCY === 'NGN' ? 0 : 2,
-    maximumFractionDigits: CURRENT_CURRENCY === 'NGN' ? 0 : 2
+    maximumFractionDigits: CURRENT_CURRENCY === 'NGN' ? 0 : 2,
   });
 }
 
@@ -1576,7 +1457,7 @@ const CATEGORIES = [
 ];
 
 /* ============================================================
-   PRODUCTS — edit prices freely (base GBP)
+   PRODUCTS (prices in GBP)
 ============================================================ */
 const PRODUCTS = [
   { id:'1', slug:'white-garri-ijebu', name:'White Garri (Ijebu)', category:'grains',
@@ -1584,64 +1465,53 @@ const PRODUCTS = [
     image:'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80',
     sizes:[{label:'1kg',price:4.50},{label:'2kg',price:8.00},{label:'5kg',price:18.00},{label:'10kg',price:34.00},{label:'25kg',price:78.00}],
     featured:true, bestSeller:true, wholesale:true },
-
   { id:'2', slug:'ground-crayfish', name:'Ground Crayfish', category:'seafood',
     description:'Sun-dried, freshly ground crayfish with rich aroma.',
     image:'https://images.unsplash.com/photo-1611171711791-b34fa42e9fc2?w=800&q=80',
     sizes:[{label:'250g',price:6.50},{label:'500g',price:12.00},{label:'1kg',price:22.00}],
     featured:true, bestSeller:true },
-
   { id:'3', slug:'egusi-melon-seeds', name:'Egusi (Melon Seeds)', category:'grains',
     description:'Clean, hand-picked melon seeds, perfect for rich egusi soup.',
     image:'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80',
     sizes:[{label:'500g',price:7.50},{label:'1kg',price:13.50},{label:'5kg',price:62.00}],
     featured:true },
-
   { id:'4', slug:'ofada-rice', name:'Ofada Rice', category:'grains',
     description:'Authentic locally-grown Ofada rice — unpolished, aromatic, delicious.',
     image:'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=80',
     sizes:[{label:'1kg',price:5.00},{label:'5kg',price:22.00},{label:'10kg',price:42.00}],
     bestSeller:true },
-
   { id:'5', slug:'ponmo-cow-skin', name:'Ponmo (Cow Skin)', category:'proteins',
     description:'Well-processed, clean ponmo — soft and ready to cook.',
     image:'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=800&q=80',
     sizes:[{label:'500g',price:5.50},{label:'1kg',price:10.00},{label:'2kg',price:19.00}],
     featured:true },
-
   { id:'6', slug:'pure-red-palm-oil', name:'Pure Red Palm Oil', category:'oils',
     description:'Fresh, unrefined palm oil pressed from ripe palm fruit.',
     image:'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&q=80',
     sizes:[{label:'1L',price:6.00},{label:'5L',price:26.00},{label:'25L',price:120.00}],
     bestSeller:true, wholesale:true },
-
   { id:'7', slug:'honey-beans-oloyin', name:'Honey Beans (Oloyin)', category:'grains',
     description:'Sweet, tender honey beans — clean, stone-free, ready to cook.',
     image:'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80',
     sizes:[{label:'1kg',price:5.00},{label:'5kg',price:22.00},{label:'10kg',price:42.00}],
     featured:true },
-
   { id:'8', slug:'pure-groundnut-oil', name:'Pure Groundnut Oil', category:'oils',
     description:'100% pure cold-pressed groundnut oil — rich aroma and taste.',
     image:'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&q=80',
     sizes:[{label:'1L',price:7.00},{label:'5L',price:32.00}] },
-
   { id:'9', slug:'dried-stockfish', name:'Dried Stockfish', category:'seafood',
     description:'Premium dried stockfish — grade A, authentic sourced.',
     image:'https://images.unsplash.com/photo-1611171711791-b34fa42e9fc2?w=800&q=80',
     sizes:[{label:'500g',price:18.00},{label:'1kg',price:34.00}],
     featured:true },
-
   { id:'10', slug:'native-spice-mix', name:'Native Spice Mix', category:'spices',
     description:'Authentic Nigerian spice blend — perfect for stews, soups, and rice.',
     image:'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80',
     sizes:[{label:'100g',price:3.50},{label:'250g',price:7.50}] },
-
   { id:'11', slug:'roasted-groundnut', name:'Roasted Groundnut', category:'household',
     description:'Freshly roasted groundnut — crunchy and full of flavour.',
     image:'https://images.unsplash.com/photo-1567892737950-30c4db37cd89?w=800&q=80',
     sizes:[{label:'500g',price:5.00},{label:'1kg',price:9.00}] },
-
   { id:'12', slug:'dried-red-pepper', name:'Dried Red Pepper', category:'spices',
     description:'Sun-dried red pepper — ground or whole, packs real heat.',
     image:'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80',
@@ -1671,8 +1541,8 @@ const FAQS = [
   { q:'What payment methods do you accept?', a:'Bank transfer, card payment, and PayPal. Payment details are shared via WhatsApp when you place your order, and we confirm everything before dispatch.' },
   { q:'Do you offer wholesale or bulk pricing?', a:'Yes. Many of our products are available in wholesale quantities. Contact us on WhatsApp or email for a custom quote.' },
   { q:'How fresh are your products?', a:'We source regularly in small batches and package carefully to preserve flavour and quality. Every item is inspected before dispatch.' },
-  { q:'Can I return or get a refund?', a:'Yes. You may request a refund or replacement within 14 days of delivery for damaged, spoiled, or incorrect items. See our Refund policy for full details.' },
-  { q:'How do I request a refund?', a:'Click the "Request refund" button in the top dashboard, fill in your order reference and details, and we\'ll respond within 2 business days.' },
+  { q:'Can I return or get a refund?', a:'Yes. You may request a refund or replacement within 14 days of delivery for damaged, spoiled, or incorrect items. See our Refund Policy in the dashboard for full details.' },
+  { q:'How do I request a refund?', a:"Click the 'Request Refund' button in the top dashboard, fill in your order reference and details, and we'll respond within 2 business days." },
 ];
 
 /* ============================================================
@@ -1687,22 +1557,22 @@ const store = {
 /* ============================================================
    STATE
 ============================================================ */
-let cart           = store.get('yethy-cart', []);
-let users          = store.get('yethy-users', []);
-let session        = store.get('yethy-session', null);
-let activeCat      = 'all';
-let productCtx     = null;
+let cart       = store.get('yethy-cart', []);
+let users      = store.get('yethy-users', []);
+let session    = store.get('yethy-session', null);
+let activeCat  = 'all';
+let productCtx = null;
 let productSizeIdx = 0;
-let productQty     = 1;
+let productQty = 1;
 let pendingCheckout = false;
+let recoverStep = 1;
 
 /* ============================================================
-   PASSWORD HASH
-   NOTE: This is client-side only. For real production use a
-   proper backend auth service.
+   PASSWORD HASH (client-side only — swap for real auth in production)
 ============================================================ */
 async function hashPassword(pw){
-  const data = new TextEncoder().encode(pw + '::yethy::2024::salt');
+  const enc = new TextEncoder();
+  const data = enc.encode(pw + '::yethy::2024::salt');
   const buf = await crypto.subtle.digest('SHA-256', data);
   return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
 }
@@ -1719,13 +1589,7 @@ async function signup(fullName, email, password){
   email = email.trim().toLowerCase();
   if (users.find(u => u.email === email)) throw new Error('An account with that email already exists.');
   const hashed = await hashPassword(password);
-  const user = {
-    id: 'u_' + Date.now(),
-    fullName: fullName.trim(),
-    email,
-    password: hashed,
-    createdAt: Date.now(),
-  };
+  const user = { id:'u_' + Date.now(), fullName: fullName.trim(), email, password: hashed, createdAt: Date.now() };
   users.push(user);
   store.set('yethy-users', users);
   session = { userId: user.id, loggedInAt: Date.now() };
@@ -1748,6 +1612,7 @@ function logout(){
   session = null;
   store.del('yethy-session');
   updateAccountUI();
+  closeAccountMenu();
   showToast('Logged out');
 }
 
@@ -1761,29 +1626,44 @@ async function resetPassword(email, newPassword){
 }
 
 /* ============================================================
-   ACCOUNT UI
+   ACCOUNT MENU
 ============================================================ */
 function updateAccountUI(){
+  const btn = document.getElementById('account-btn');
   const label = document.getElementById('account-label');
+  const head = document.getElementById('account-dd-head');
+  const logoutBtn = document.getElementById('account-logout');
   const u = getCurrentUser();
-  if (u) label.textContent = u.fullName.split(' ')[0];
-  else label.textContent = 'Login';
+  if (u){
+    label.textContent = u.fullName.split(' ')[0];
+    btn.title = 'Signed in as ' + u.email;
+    head.innerHTML = `<div class="account-dd-name">${u.fullName}</div><div class="account-dd-email">${u.email}</div>`;
+    logoutBtn.style.display = 'flex';
+  } else {
+    label.textContent = 'Login';
+    btn.title = 'Login or Sign Up';
+    head.innerHTML = `<div class="account-dd-name">Welcome</div><div class="account-dd-email">Sign in to save your details at checkout.</div>`;
+    logoutBtn.style.display = 'none';
+  }
 }
 
-function handleAccountClick(){
+function toggleAccountMenu(e){
+  e.stopPropagation();
   const u = getCurrentUser();
-  if (!u) {
-    pendingCheckout = false;
-    switchAuthTab('login');
+  const dd = document.getElementById('account-dd');
+  if (!u && !dd.classList.contains('open')){
+    // Not signed in — open auth modal directly
     openModal('modal-auth');
+    switchAuthTab('login');
     return;
   }
-  const choice = confirm(`Signed in as ${u.fullName}\n${u.email}\n\nClick OK to log out, or Cancel to stay signed in.`);
-  if (choice) logout();
+  dd.classList.toggle('open');
 }
+function closeAccountMenu(){ document.getElementById('account-dd').classList.remove('open'); }
+document.addEventListener('click', () => closeAccountMenu());
 
 /* ============================================================
-   AUTH MODAL
+   AUTH MODAL TABS
 ============================================================ */
 function switchAuthTab(tab){
   document.querySelectorAll('.auth-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
@@ -1791,7 +1671,11 @@ function switchAuthTab(tab){
   document.getElementById('form-signup').style.display = tab === 'signup' ? 'flex' : 'none';
   document.getElementById('form-recover').style.display = tab === 'recover' ? 'flex' : 'none';
   document.getElementById('auth-msg-slot').innerHTML = '';
-  if (tab !== 'recover') recoverStep = 1;
+  if (tab !== 'recover'){
+    recoverStep = 1;
+    document.getElementById('rc-newpass-field').style.display = 'none';
+    document.getElementById('rc-submit').textContent = 'Continue';
+  }
 }
 
 function showRecover(){
@@ -1806,10 +1690,10 @@ function showRecover(){
 }
 
 function authMsg(text, type = 'error'){
-  document.getElementById('auth-msg-slot').innerHTML =
-    `<div class="auth-msg ${type}" style="margin-bottom:18px">${text}</div>`;
+  document.getElementById('auth-msg-slot').innerHTML = `<div class="auth-msg ${type}" style="margin-bottom:18px">${text}</div>`;
 }
 
+/* Login */
 document.getElementById('form-login').addEventListener('submit', async e => {
   e.preventDefault();
   const email = document.getElementById('lg-email').value;
@@ -1821,17 +1705,12 @@ document.getElementById('form-login').addEventListener('submit', async e => {
     showToast('Welcome back, ' + u.fullName.split(' ')[0]);
     setTimeout(() => {
       closeModal('modal-auth');
-      e.target.reset();
-      if (pendingCheckout) {
-        pendingCheckout = false;
-        go('checkout');
-        prefillCheckout();
-        renderCheckout();
-      }
+      if (pendingCheckout) { pendingCheckout = false; go('checkout'); prefillCheckout(); renderCheckout(); }
     }, 500);
   } catch (err) { authMsg(err.message); }
 });
 
+/* Signup */
 document.getElementById('form-signup').addEventListener('submit', async e => {
   e.preventDefault();
   const name = document.getElementById('su-name').value;
@@ -1844,18 +1723,12 @@ document.getElementById('form-signup').addEventListener('submit', async e => {
     showToast('Account created');
     setTimeout(() => {
       closeModal('modal-auth');
-      e.target.reset();
-      if (pendingCheckout) {
-        pendingCheckout = false;
-        go('checkout');
-        prefillCheckout();
-        renderCheckout();
-      }
+      if (pendingCheckout) { pendingCheckout = false; go('checkout'); prefillCheckout(); renderCheckout(); }
     }, 600);
   } catch (err) { authMsg(err.message); }
 });
 
-let recoverStep = 1;
+/* Recover */
 document.getElementById('form-recover').addEventListener('submit', async e => {
   e.preventDefault();
   const email = document.getElementById('rc-email').value.trim().toLowerCase();
@@ -1865,7 +1738,7 @@ document.getElementById('form-recover').addEventListener('submit', async e => {
     if (!user) return authMsg('No account found with that email.');
     authMsg('Account found. Set a new password below.', 'success');
     document.getElementById('rc-newpass-field').style.display = 'block';
-    document.getElementById('rc-submit').textContent = 'Reset password';
+    document.getElementById('rc-submit').textContent = 'Reset Password';
     recoverStep = 2;
   } else {
     const np = document.getElementById('rc-newpass').value;
@@ -1874,11 +1747,7 @@ document.getElementById('form-recover').addEventListener('submit', async e => {
     authMsg('Password updated. You can now log in.', 'success');
     document.getElementById('rc-submit').textContent = 'Continue';
     recoverStep = 1;
-    setTimeout(() => {
-      switchAuthTab('login');
-      document.getElementById('form-login').style.display = 'flex';
-      document.getElementById('form-recover').style.display = 'none';
-    }, 900);
+    setTimeout(() => switchAuthTab('login'), 900);
   }
 });
 
@@ -1927,7 +1796,7 @@ function updateCartUI(){
         </div>
         <h3>Your cart is empty</h3>
         <p>Add some products to get started.</p>
-        <button class="btn btn-primary" style="margin-top:18px" onclick="closeCart(); go('shop')">Start shopping</button>
+        <button class="btn btn-primary" style="margin-top:18px" onclick="closeCart(); go('shop')">Start Shopping</button>
       </div>`;
     foot.style.display = 'none';
     return;
@@ -1961,11 +1830,10 @@ function openCart(){
   document.getElementById('cart-drawer').classList.add('open');
   document.body.classList.add('no-scroll');
 }
-
 function closeCart(){
   document.getElementById('cart-bg').classList.remove('open');
   document.getElementById('cart-drawer').classList.remove('open');
-  if (!document.querySelector('.modal-bg.open')) document.body.classList.remove('no-scroll');
+  document.body.classList.remove('no-scroll');
 }
 
 function proceedToCheckout(){
@@ -1974,8 +1842,8 @@ function proceedToCheckout(){
   const u = getCurrentUser();
   if (!u){
     pendingCheckout = true;
-    switchAuthTab('login');
     openModal('modal-auth');
+    switchAuthTab('login');
     showToast('Please sign in to checkout');
     return;
   }
@@ -1995,9 +1863,8 @@ function prefillCheckout(){
 
 function renderCheckout(){
   const wrap = document.getElementById('checkout-items');
-  if (!wrap) return;
   if (cart.length === 0){
-    wrap.innerHTML = '<p class="small">Your cart is empty.</p>';
+    wrap.innerHTML = '<p style="color:var(--ink-soft);font-size:.86rem">Your cart is empty.</p>';
     document.getElementById('checkout-subtotal').textContent = formatPrice(0);
     document.getElementById('checkout-total').textContent = formatPrice(0);
     return;
@@ -2007,9 +1874,9 @@ function renderCheckout(){
       <div class="sum-img"><img src="${i.image}" alt="${i.name}" /></div>
       <div style="flex:1;min-width:0">
         <div style="font-weight:600;color:var(--green-900);overflow:hidden;text-overflow:ellipsis">${i.name}</div>
-        <div style="color:var(--ink-soft);font-size:.74rem;margin-top:2px">${i.size} × ${i.quantity}</div>
+        <div style="color:var(--ink-soft);font-size:.72rem;margin-top:2px">${i.size} × ${i.quantity}</div>
       </div>
-      <div style="font-weight:700;color:var(--green-700);white-space:nowrap">${formatPrice(i.price * i.quantity)}</div>
+      <div style="font-weight:700;color:var(--green-700)">${formatPrice(i.price * i.quantity)}</div>
     </div>`).join('');
   document.getElementById('checkout-subtotal').textContent = formatPrice(cartSubtotal());
   document.getElementById('checkout-total').textContent = formatPrice(cartSubtotal());
@@ -2021,12 +1888,7 @@ function renderCheckout(){
 document.getElementById('checkout-form').addEventListener('submit', e => {
   e.preventDefault();
   const u = getCurrentUser();
-  if (!u){
-    pendingCheckout = true;
-    switchAuthTab('login');
-    openModal('modal-auth');
-    return;
-  }
+  if (!u){ openModal('modal-auth'); switchAuthTab('login'); return; }
   if (cart.length === 0) return showToast('Your cart is empty');
 
   const name    = document.getElementById('cust-name').value.trim();
@@ -2049,17 +1911,12 @@ document.getElementById('checkout-form').addEventListener('submit', e => {
     `*Address:* ${addr}`,
   ];
   if (notes) lines.push(`*Notes:* ${notes}`);
-  lines.push('');
-  lines.push('*Items:*');
+  lines.push('', '*Items:*');
   cart.forEach(i => lines.push(`• ${i.name} (${i.size}) × ${i.quantity} — ${formatPrice(i.price * i.quantity)}`));
-  lines.push('');
-  lines.push(`*Subtotal:* ${formatPrice(cartSubtotal())} (${CURRENT_CURRENCY})`);
-  lines.push('*Delivery:* To be confirmed');
-  lines.push('');
-  lines.push('Please confirm my order and delivery fee. Thank you!');
+  lines.push('', `*Subtotal:* ${formatPrice(cartSubtotal())} (${CURRENT_CURRENCY})`);
+  lines.push('*Delivery:* To be confirmed', '', 'Please confirm my order and delivery fee. Thank you!');
 
   window.open(waLink(lines.join('\n')), '_blank');
-
   cart = [];
   saveCart();
   e.target.reset();
@@ -2080,9 +1937,7 @@ document.getElementById('refund-form').addEventListener('submit', e => {
     `*Order Ref:* ${document.getElementById('rf-order').value}`,
     `*Reason:* ${document.getElementById('rf-reason').value}`,
     `*Preferred Resolution:* ${document.getElementById('rf-resolution').value}`,
-    '',
-    '*Details:*',
-    document.getElementById('rf-details').value,
+    '', '*Details:*', document.getElementById('rf-details').value,
   ];
   window.open(waLink(lines.join('\n')), '_blank');
   closeModal('modal-request-refund');
@@ -2107,6 +1962,7 @@ function openWhatsApp(e){
 function openModal(id){
   document.getElementById(id).classList.add('open');
   document.body.classList.add('no-scroll');
+  if (id === 'modal-auth') recoverStep = 1;
 }
 function closeModal(id){
   document.getElementById(id).classList.remove('open');
@@ -2114,13 +1970,9 @@ function closeModal(id){
     document.body.classList.remove('no-scroll');
   }
 }
-function closeModalOnBg(e, id){
-  if (e.target.id === id) closeModal(id);
-}
-function openReviews(){
-  renderReviews();
-  openModal('modal-reviews');
-}
+function closeModalOnBg(e, id){ if (e.target.id === id) closeModal(id); }
+function openReviews(){ renderReviews(); openModal('modal-reviews'); }
+
 function openProduct(id){
   productCtx = PRODUCTS.find(p => p.id === id);
   if (!productCtx) return;
@@ -2131,7 +1983,7 @@ function openProduct(id){
 }
 
 /* ============================================================
-   PRODUCT MODAL
+   RENDER: Product modal
 ============================================================ */
 function renderProductModal(){
   const p = productCtx;
@@ -2140,51 +1992,44 @@ function renderProductModal(){
 
   wrap.innerHTML = `
     <div style="display:grid;grid-template-columns:1fr" class="pm-grid">
-      <style>
-        @media(min-width:768px){ .pm-grid{ grid-template-columns:1fr 1fr !important } }
-      </style>
+      <style>@media(min-width:768px){ .pm-grid{ grid-template-columns:1fr 1fr !important } }</style>
       <div style="aspect-ratio:1;background:var(--cream-200);overflow:hidden">
         <img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover" />
       </div>
       <div style="padding:28px">
-        <div class="eyebrow" style="color:var(--orange-600)">${catName(p.category)}</div>
-        <h2 class="h-2" style="margin-top:8px">${p.name}</h2>
-        <p class="lead" style="font-size:.94rem;margin-top:10px">${p.description}</p>
+        <div class="mono" style="color:var(--orange-600)">${catName(p.category)}</div>
+        <h2 class="h-2" style="margin-top:6px">${p.name}</h2>
+        <p class="lead" style="font-size:.9rem;margin-top:10px">${p.description}</p>
         <div class="h-2" style="color:var(--green-700);margin-top:18px;font-size:1.7rem">${formatPrice(size.price)}</div>
 
         <div style="margin-top:22px">
-          <div class="small" style="font-weight:600;color:var(--ink);margin-bottom:10px">Size</div>
-          <div style="display:flex;flex-wrap:wrap;gap:8px">
-            ${p.sizes.map((s, i) => `
-              <button class="chip ${i === productSizeIdx ? 'active' : ''}" onclick="selectSize(${i})">${s.label}</button>
-            `).join('')}
+          <div class="mono" style="color:var(--ink-soft);margin-bottom:9px">Size</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            ${p.sizes.map((s, i) => `<button class="chip ${i === productSizeIdx ? 'active' : ''}" onclick="selectSize(${i})">${s.label}</button>`).join('')}
           </div>
         </div>
 
         <div style="margin-top:18px">
-          <div class="small" style="font-weight:600;color:var(--ink);margin-bottom:10px">Quantity</div>
-          <div class="qty" style="background:#fff">
-            <button onclick="changeQty(-1)" style="padding:6px 14px">−</button>
-            <span id="pm-qty" style="padding:0 14px;font-size:.92rem">${productQty}</span>
-            <button onclick="changeQty(1)" style="padding:6px 14px">+</button>
+          <div class="mono" style="color:var(--ink-soft);margin-bottom:9px">Quantity</div>
+          <div class="qty">
+            <button onclick="changeQty(-1)">−</button>
+            <span id="pm-qty" style="padding:0 14px">${productQty}</span>
+            <button onclick="changeQty(1)">+</button>
           </div>
         </div>
 
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:26px">
           <button class="btn btn-primary" onclick="pmAddToCart()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-            Add to cart
+            Add to Cart
           </button>
-          <a class="btn btn-accent" target="_blank" rel="noopener" href="${waLink(`Hello Yethy! I'd like to order: ${p.name} (${size.label}) × ${productQty}`)}">
-            Order on WhatsApp
-          </a>
+          <a class="btn btn-accent" target="_blank" rel="noopener" href="${waLink(`Hello Yethy! I'd like to order: ${p.name} (${size.label}) × ${productQty}`)}">Order on WhatsApp</a>
         </div>
 
-        ${p.wholesale ? `<div class="policy"><div class="note" style="margin-top:22px"><strong>Wholesale available</strong> — message us on WhatsApp for a bulk quote.</div></div>` : ''}
+        ${p.wholesale ? `<div class="note" style="margin-top:22px;background:var(--orange-50);border-left:3px solid var(--orange-500);padding:14px 18px;border-radius:0 var(--r-sm) var(--r-sm) 0;font-size:.85rem;color:var(--green-900);line-height:1.6"><strong>Wholesale available</strong> — message us on WhatsApp for a bulk quote.</div>` : ''}
       </div>
     </div>`;
 }
-
 function selectSize(i){ productSizeIdx = i; renderProductModal(); }
 function changeQty(d){
   productQty = Math.max(1, productQty + d);
@@ -2197,22 +2042,20 @@ function pmAddToCart(){
   addToCart({ productId:p.id, slug:p.slug, name:p.name, image:p.image, size:size.label, price:size.price, quantity:productQty });
   closeModal('modal-product');
   showToast('Added to cart');
-  setTimeout(openCart, 180);
+  setTimeout(openCart, 200);
 }
-
 function catName(slug){ const c = CATEGORIES.find(x => x.slug === slug); return c ? c.name : slug; }
 
 /* ============================================================
-   PRODUCT CARD
+   RENDER: Product card
 ============================================================ */
 function productCardHTML(p){
   const base = p.sizes[0].price;
-  const tag = p.bestSeller ? '<span class="prod-tag best">Best seller</span>'
+  const tag = p.bestSeller ? '<span class="prod-tag bestseller">Best Seller</span>'
             : (p.wholesale ? '<span class="prod-tag wholesale">Wholesale</span>' : '');
   const sizes = p.sizes.slice(0, 3).map(s => `<span class="prod-size">${s.label}</span>`).join('');
   const more = p.sizes.length > 3 ? `<span class="prod-size">+${p.sizes.length - 3}</span>` : '';
   const priceRange = p.sizes.length > 1 ? `From ${formatPrice(base)}` : formatPrice(base);
-
   return `
     <div class="prod" onclick="openProduct('${p.id}')">
       <div class="prod-img">
@@ -2229,16 +2072,19 @@ function productCardHTML(p){
 }
 
 /* ============================================================
-   RENDERERS
+   RENDER: sections
 ============================================================ */
 function renderCategories(){
   const el = document.getElementById('cat-grid');
   if (!el) return;
-  el.innerHTML = CATEGORIES.map(c => `
+  el.innerHTML = CATEGORIES.map((c, i) => `
     <div class="cat-card" onclick="go('shop'); filterShop('${c.slug}')">
       <img src="${c.image}" alt="${c.name}" loading="lazy" />
       <div class="cat-card-overlay"></div>
-      <div class="cat-card-label">${c.name}</div>
+      <div class="cat-card-label">
+        <div class="num">0${i+1}</div>
+        <div class="name">${c.name}</div>
+      </div>
     </div>`).join('');
 }
 
@@ -2255,39 +2101,29 @@ function renderShop(){
   const list = activeCat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.category === activeCat);
   el.innerHTML = list.length
     ? list.map(productCardHTML).join('')
-    : '<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--ink-soft)">No products in this category yet.</div>';
+    : '<div style="grid-column:1/-1;text-align:center;padding:64px 20px;color:var(--ink-soft)">No products in this category yet.</div>';
 }
 
 function renderFilters(){
   const el = document.getElementById('filters');
   if (!el) return;
   const chips = [{slug:'all',name:'All'}, ...CATEGORIES];
-  el.innerHTML = chips.map(c =>
-    `<button class="chip ${activeCat === c.slug ? 'active' : ''}" onclick="filterShop('${c.slug}')">${c.name}</button>`
-  ).join('');
+  el.innerHTML = chips.map(c => `<button class="chip ${activeCat === c.slug ? 'active' : ''}" onclick="filterShop('${c.slug}')">${c.name}</button>`).join('');
 }
-
-function filterShop(slug){
-  activeCat = slug;
-  renderFilters();
-  renderShop();
-  window.scrollTo({ top: 200, behavior: 'smooth' });
-}
+function filterShop(slug){ activeCat = slug; renderFilters(); renderShop(); }
 
 function renderReviews(){
   const list = document.getElementById('reviews-list');
   if (!list) return;
-
   const avg = (REVIEWS.reduce((s, r) => s + r.rating, 0) / REVIEWS.length).toFixed(1);
   document.getElementById('avg-score').textContent = avg;
   document.getElementById('review-count').textContent = REVIEWS.length;
 
-  const starHTML = n => Array.from({length:5}, (_, i) =>
+  const starHTML = (n) => Array.from({length:5}, (_, i) =>
     `<svg class="${i < n ? '' : 'empty'}" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
   ).join('');
 
   document.getElementById('avg-stars').innerHTML = starHTML(Math.round(avg));
-
   list.innerHTML = REVIEWS.map(r => `
     <div class="review-row">
       <div class="stars">${starHTML(r.rating)}</div>
@@ -2304,10 +2140,7 @@ function renderReviews(){
       <div class="review-card">
         <div class="stars">${starHTML(r.rating)}</div>
         <div class="review-body">"${r.body}"</div>
-        <div class="review-author">
-          <strong>${r.name}</strong>
-          <span>${r.city}</span>
-        </div>
+        <div class="review-author"><strong>${r.name}</strong><span>${r.city}</span></div>
       </div>`).join('');
   }
 }
@@ -2315,27 +2148,21 @@ function renderReviews(){
 function renderFAQs(){
   const el = document.getElementById('faq-list');
   if (!el) return;
-  el.innerHTML = FAQS.map(f => `
-    <details class="faq">
-      <summary>${f.q}</summary>
-      <p>${f.a}</p>
-    </details>`).join('');
+  el.innerHTML = FAQS.map(f => `<details class="faq"><summary>${f.q}</summary><p>${f.a}</p></details>`).join('');
 }
 
 /* ============================================================
-   NAV
+   NAVIGATION
 ============================================================ */
 function go(page){
   document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.dataset.page === page));
   window.scrollTo({ top: 0, behavior: 'smooth' });
   document.getElementById('mobile-nav').classList.remove('open');
   closeCart();
+  closeAccountMenu();
   if (page === 'checkout'){ prefillCheckout(); renderCheckout(); }
 }
-
-function toggleMobileNav(){
-  document.getElementById('mobile-nav').classList.toggle('open');
-}
+function toggleMobileNav(){ document.getElementById('mobile-nav').classList.toggle('open'); }
 
 /* ============================================================
    TOAST
@@ -2350,7 +2177,7 @@ function showToast(text){
 }
 
 /* ============================================================
-   RE-RENDER
+   RENDER EVERYTHING
 ============================================================ */
 function renderEverything(){
   renderHome();
@@ -2364,6 +2191,7 @@ function renderEverything(){
 ============================================================ */
 function init(){
   document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('currency-sel').value = CURRENT_CURRENCY;
   document.querySelectorAll('.currency-select').forEach(s => s.value = CURRENT_CURRENCY);
 
   renderCategories();
@@ -2379,11 +2207,11 @@ function init(){
     if (e.key === 'Escape'){
       document.querySelectorAll('.modal-bg.open').forEach(m => m.classList.remove('open'));
       closeCart();
+      closeAccountMenu();
       document.body.classList.remove('no-scroll');
     }
   });
 }
-
 document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>

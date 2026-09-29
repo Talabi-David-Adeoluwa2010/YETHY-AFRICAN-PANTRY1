@@ -409,6 +409,28 @@ input,textarea,select{font-family:inherit;font-size:1rem}
 .review-author{margin-top:18px;padding-top:16px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink-soft)}
 .review-author strong{font-weight:600;color:var(--green-800)}
 
+/* Empty-state for reviews */
+.reviews-empty{
+  grid-column:1/-1;
+  background:var(--cream-50);border:1px dashed var(--rule);
+  border-radius:var(--r);padding:48px 24px;
+  text-align:center;
+}
+.reviews-empty .reviews-empty-ico{
+  width:56px;height:56px;border-radius:50%;
+  background:var(--green-50);color:var(--green-600);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;
+}
+.reviews-empty .reviews-empty-ico svg{width:24px;height:24px}
+.reviews-empty h3{
+  font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;
+  color:var(--green-900);letter-spacing:-.015em;
+}
+.reviews-empty p{
+  font-size:.9rem;color:var(--ink-soft);margin-top:8px;line-height:1.6;max-width:44ch;margin-left:auto;margin-right:auto;
+}
+
 /* ================================================================
    PAGE HEADER
 ================================================================ */
@@ -1350,13 +1372,13 @@ body.no-scroll{overflow:hidden}
       <p>What our customers say after their orders arrive.</p>
     </div>
     <div class="modal-body">
-      <div class="reviews-summary">
+      <div class="reviews-summary" id="reviews-summary" style="display:none">
         <div>
-          <div class="reviews-score" id="avg-score">4.9</div>
+          <div class="reviews-score" id="avg-score">—</div>
         </div>
         <div class="reviews-meta">
           <div class="stars" id="avg-stars"></div>
-          <p><strong id="review-count">0</strong> verified reviews · 97% would order again</p>
+          <p><strong id="review-count">0</strong> verified reviews</p>
         </div>
       </div>
       <div class="reviews-list" id="reviews-list"></div>
@@ -1794,7 +1816,7 @@ const PRODUCTS = [
 ];
 
 /* ================================================================
-   REVIEWS (sample — replace with real customer reviews)
+   REVIEWS — empty: site displays "No reviews yet" everywhere
 ================================================================ */
 const REVIEWS = [];
 
@@ -2394,17 +2416,45 @@ function filterShop(slug){ activeCat = slug; renderFilters(); renderShop(); }
 
 function renderReviews(){
   const list = document.getElementById('reviews-list');
+  const strip = document.getElementById('review-strip');
+  const summary = document.getElementById('reviews-summary');
+  const countEl = document.getElementById('review-count');
+  const scoreEl = document.getElementById('avg-score');
+  const starsEl = document.getElementById('avg-stars');
   if (!list) return;
 
+  // Empty state — show "No reviews yet" everywhere
+  if (REVIEWS.length === 0){
+    if (summary) summary.style.display = 'none';
+    if (countEl) countEl.textContent = '0';
+    if (scoreEl) scoreEl.textContent = '—';
+    if (starsEl) starsEl.innerHTML = '';
+
+    const emptyHTML = `
+      <div class="reviews-empty">
+        <div class="reviews-empty-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>No reviews yet</h3>
+        <p>Be the first to share your experience — reviews will appear here once customers start leaving feedback.</p>
+      </div>`;
+
+    list.innerHTML = emptyHTML;
+    if (strip) strip.innerHTML = emptyHTML;
+    return;
+  }
+
+  // (Kept for when real reviews are added back)
+  if (summary) summary.style.display = 'flex';
   const avg = (REVIEWS.reduce((s, r) => s + r.rating, 0) / REVIEWS.length).toFixed(1);
-  document.getElementById('avg-score').textContent = avg;
-  document.getElementById('review-count').textContent = REVIEWS.length;
+  if (scoreEl) scoreEl.textContent = avg;
+  if (countEl) countEl.textContent = REVIEWS.length;
 
   const starHTML = (n) => Array.from({length:5}, (_, i) =>
     `<svg class="${i < n ? '' : 'empty'}" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
   ).join('');
 
-  document.getElementById('avg-stars').innerHTML = starHTML(Math.round(avg));
+  if (starsEl) starsEl.innerHTML = starHTML(Math.round(avg));
 
   list.innerHTML = REVIEWS.map(r => `
     <div class="review-row">
@@ -2416,8 +2466,6 @@ function renderReviews(){
       </div>
     </div>`).join('');
 
-  // Homepage review strip
-  const strip = document.getElementById('review-strip');
   if (strip){
     strip.innerHTML = REVIEWS.slice(0, 3).map(r => `
       <div class="review-card">
